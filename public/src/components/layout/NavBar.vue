@@ -14,7 +14,8 @@ const navItems = [
   { path: '/practices', label: 'Practices' },
   { path: '/onboarding', label: 'Onboarding' },
   { path: '/anti-patterns', label: 'Anti-Patterns' },
-  { path: '/reference', label: 'Reference' }
+  { path: '/reference', label: 'Reference' },
+  { path: '/assessment', label: 'Assessment' }
 ]
 
 const toggleMobileMenu = () => {

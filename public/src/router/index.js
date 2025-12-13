@@ -40,6 +40,11 @@ const routes = [
     path: '/reference',
     name: 'Reference',
     component: () => import('@/views/ReferenceView.vue')
+  },
+  {
+    path: '/assessment',
+    name: 'Assessment',
+    component: () => import('@/views/AssessmentView.vue')
   }
 ]
 
