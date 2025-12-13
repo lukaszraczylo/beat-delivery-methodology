@@ -1,5 +1,4 @@
 <script setup>
-import CodeBlock from '@/components/ui/CodeBlock.vue'
 import { ceremonies, incidentProtocol, technicalPractices, definitionOfDone } from '@/data/manifesto'
 </script>
 
@@ -77,21 +76,42 @@ import { ceremonies, incidentProtocol, technicalPractices, definitionOfDone } fr
         </div>
 
         <div class="max-w-xl mx-auto">
-          <CodeBlock title="Check-in Template">Working on: [current task]
-Blocked by: [nothing / specific issue]</CodeBlock>
+          <!-- Visual Check-in Template -->
+          <div class="glass p-5 sm:p-6 rounded-xl mb-6">
+            <div class="space-y-3">
+              <div class="flex items-center gap-3 p-3 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-tasks text-white"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-blue-600 dark:text-blue-400 font-semibold uppercase tracking-wide">Working on</div>
+                  <div class="text-sm text-gray-700 dark:text-gray-300">[current task]</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-hand-paper text-white"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-amber-600 dark:text-amber-400 font-semibold uppercase tracking-wide">Blocked by</div>
+                  <div class="text-sm text-gray-700 dark:text-gray-300">[nothing / specific issue]</div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <div class="mt-6 grid sm:grid-cols-3 gap-4">
-            <div class="glass p-4 rounded-lg text-center">
-              <i class="fas fa-clock text-blue-500 text-xl mb-2"></i>
-              <div class="text-sm text-gray-600 dark:text-gray-400">Post once daily</div>
+          <div class="grid grid-cols-3 gap-3 sm:gap-4">
+            <div class="glass p-3 sm:p-4 rounded-lg text-center">
+              <i class="fas fa-clock text-blue-500 text-lg sm:text-xl mb-2"></i>
+              <div class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Post once daily</div>
             </div>
-            <div class="glass p-4 rounded-lg text-center">
-              <i class="fas fa-stopwatch text-purple-500 text-xl mb-2"></i>
-              <div class="text-sm text-gray-600 dark:text-gray-400">Two minutes</div>
+            <div class="glass p-3 sm:p-4 rounded-lg text-center">
+              <i class="fas fa-stopwatch text-purple-500 text-lg sm:text-xl mb-2"></i>
+              <div class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Two minutes</div>
             </div>
-            <div class="glass p-4 rounded-lg text-center">
-              <i class="fas fa-users-slash text-green-500 text-xl mb-2"></i>
-              <div class="text-sm text-gray-600 dark:text-gray-400">No gathering required</div>
+            <div class="glass p-3 sm:p-4 rounded-lg text-center">
+              <i class="fas fa-users-slash text-green-500 text-lg sm:text-xl mb-2"></i>
+              <div class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">No gathering</div>
             </div>
           </div>
         </div>

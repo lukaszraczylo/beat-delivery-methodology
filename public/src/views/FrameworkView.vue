@@ -1,5 +1,4 @@
 <script setup>
-import CodeBlock from '@/components/ui/CodeBlock.vue'
 import { roles, priorityBuckets, ceremonies, constraints } from '@/data/manifesto'
 
 const workItems = [
@@ -169,7 +168,30 @@ const bucketColors = {
           <p class="text-gray-600 dark:text-gray-400">A simple kanban with priority built in.</p>
         </div>
 
-        <CodeBlock title="Board Flow">ICE → LATER → NEXT → IN PROGRESS → DONE</CodeBlock>
+        <!-- Visual Board Flow -->
+        <div class="glass p-4 sm:p-6 rounded-xl overflow-x-auto">
+          <div class="flex items-center justify-start sm:justify-center gap-2 sm:gap-3 min-w-max sm:min-w-0">
+            <div class="px-3 sm:px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-medium">
+              ICE
+            </div>
+            <i class="fas fa-arrow-right text-gray-400 text-xs"></i>
+            <div class="px-3 sm:px-4 py-2 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs sm:text-sm font-medium">
+              LATER
+            </div>
+            <i class="fas fa-arrow-right text-gray-400 text-xs"></i>
+            <div class="px-3 sm:px-4 py-2 rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-xs sm:text-sm font-medium">
+              NEXT
+            </div>
+            <i class="fas fa-arrow-right text-gray-400 text-xs"></i>
+            <div class="px-3 sm:px-4 py-2 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-xs sm:text-sm font-medium">
+              IN PROGRESS
+            </div>
+            <i class="fas fa-arrow-right text-gray-400 text-xs"></i>
+            <div class="px-3 sm:px-4 py-2 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs sm:text-sm font-medium">
+              DONE
+            </div>
+          </div>
+        </div>
 
         <div class="mt-8 grid sm:grid-cols-3 gap-4">
           <div class="glass p-4 rounded-lg">
