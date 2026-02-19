@@ -7,23 +7,30 @@ defineProps({
   gradient: {
     type: String,
     default: null
+  },
+  glow: {
+    type: String,
+    default: null
   }
 })
 </script>
 
 <template>
   <div
-    class="glass p-6 rounded-xl transition-all duration-300"
-    :class="{ 'hover:shadow-lg hover:-translate-y-1': hover }"
+    class="card"
+    :class="{ 
+      'hover:-translate-y-2': hover,
+      [`shadow-glow-${glow}`]: glow 
+    }"
   >
-    <div v-if="gradient" class="flex items-start gap-4">
+    <div v-if="gradient" class="flex items-start gap-5">
       <div
-        class="icon-box"
+        class="icon-box w-14 h-14 rounded-2xl"
         :class="gradient"
       >
         <slot name="icon"></slot>
       </div>
-      <div class="flex-1">
+      <div class="flex-1 min-w-0">
         <slot></slot>
       </div>
     </div>
