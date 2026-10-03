@@ -1,0 +1,21 @@
+name: Update dependencies
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"
+
+permissions:
+  actions: write
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  update:
+    uses: lukaszraczylo/shared-actions/.github/workflows/renovate-autoupdate.yaml@main
+    with:
+      go: false
+      node-working-directory: public
+      require-node-tests: false
+      release-workflow: deploy.yml
