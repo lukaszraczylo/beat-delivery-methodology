@@ -656,6 +656,8 @@ This manifesto is open for use and adaptation.
 
 Attribution appreciated. Improvement welcomed. Dogma discouraged.
 
+The weak-point review of this manifesto — every unsupported claim, wrong number, contradiction, uncovered situation and rule that cannot be applied as written, with the planned resolution for each — is recorded in [docs/weak-points.md](docs/weak-points.md).
+
 ---
 
 *BEAT v1.0*
