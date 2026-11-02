@@ -1,0 +1,69 @@
+# Banned terms for the BEAT site copy and the README headings.
+#
+# Format: one entry per line. Lines starting with "#" are comments, blank lines
+# are ignored. The list is data only: scripts/check-banned-terms.mjs reads this
+# file, so the list can be tuned without touching the script.
+#
+# Matching: a single word matches case-insensitively on word boundaries. A
+# multi-word phrase matches case-insensitively, and a space in the phrase
+# matches any run of spaces, hyphens or underscores, so "world-class" also
+# matches "world class".
+#
+# Scope: promotional superlatives, promotional claims and hype adjectives.
+# Ordinary prose words are deliberately left out of this list.
+
+# --- Superlatives ---
+best
+perfect
+premium
+ultimate
+world-class
+best-in-class
+top-notch
+state-of-the-art
+greatest
+finest
+
+# --- Promotional claims ---
+revolutionary
+game-changing
+cutting-edge
+next-generation
+bleeding-edge
+disruptive
+transformative
+groundbreaking
+unleash
+supercharge
+unlock
+one-stop
+turnkey
+10x
+
+# --- Hype adjectives ---
+seamless
+seamlessly
+effortless
+effortlessly
+frictionless
+delightful
+stunning
+beautiful
+blazing
+blazingly
+powerful
+robust
+lightning-fast
+incredible
+amazing
+tremendous
+
+# --- Phrases found in the current copy ---
+dramatically increase
+level up
+congratulations
+transform your
+everything you need
+
+# --- Words seen in the current copy and added on purpose ---
+excellent
