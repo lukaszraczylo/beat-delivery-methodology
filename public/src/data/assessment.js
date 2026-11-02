@@ -320,7 +320,7 @@ export const overallAssessment = {
     maxScore: 48,
     questionCount: 12,
     perQuestionMax: 4,
-    categoryThresholds: 'A category is low below 40 percent of its maximum, medium from 40 to 70 percent, high above 70 percent. The same two cuts give the four overall bands: low 12 to 24, medium 25 to 36, strong 37 to 42, high 43 to 48.'
+    categoryThresholds: 'BEAT\'s own scoring rule, not a research finding: a category is low below 40 percent of its maximum, medium from 40 to 70 percent, high above 70 percent. The same two cuts give the four overall bands: low 12 to 24, medium 25 to 36, strong 37 to 42, high 43 to 48.'
   },
   validity: {
     id: 'assessment-validity',
