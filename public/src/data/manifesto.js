@@ -81,7 +81,7 @@ export const principles = {
     {
       number: 6,
       title: 'Response time is not reaction time',
-      description: 'Async means responding when working, not responding immediately. We expect a response within one working day, counted against the coverage hours in the time-zone rules. Urgent means a phone call to the on-call rota, and the rota names the fallback when nobody answers. Everything else waits.'
+      description: 'Async means responding when working, not responding immediately. We expect a response within 24 working hours — the BEAT default, listed in the constraints table — counted against the coverage hours in the time-zone rules. Urgent means a phone call to the on-call rota, and the rota names the fallback when nobody answers. Everything else waits.'
     }
   ],
   autonomy: [
@@ -183,7 +183,7 @@ export const ceremonies = [
   {
     name: 'Brainstorm',
     duration: '≤1 hr',
-    purpose: 'Creative solving, with 10-minute exit window'
+    purpose: 'Creative solving, with a 10-minute exit window — a BEAT default, not a research finding'
   }
 ]
 
@@ -223,9 +223,31 @@ export const framework = {
     'Burnout Prevention',
     'Customer & User Feedback',
     'Incidents & Emergencies',
-    'Technical Practices (Optional)'
+    'Technical Practices (Optional)',
+    'On-call and incident rotation',
+    'Working across time zones',
+    'Dependencies across teams',
+    'Accountability and measurement',
+    'Onboarding to BEAT'
   ]
 }
+
+// Section and principle ids, mapped to the site data key that holds them and
+// to the heading each side uses. This is the data-side half of the committed
+// section mapping: the README mirror and the consistency check read the same
+// ids from here.
+export const sectionMap = [
+  ...principleSections.map((s) => ({ id: s.id, heading: s.title, dataKey: `principles.${s.key}` })),
+  { id: 'section-method', heading: 'The Framework', dataKey: 'framework' },
+  { id: 'onCall', heading: 'On-call and incident rotation', dataKey: 'onCall' },
+  { id: 'timeZones', heading: 'Working across time zones', dataKey: 'timeZones' },
+  { id: 'crossTeamDependencies', heading: 'Dependencies across teams', dataKey: 'crossTeamDependencies' },
+  { id: 'measurement', heading: 'Accountability and measurement', dataKey: 'measurement' },
+  { id: 'customerFeedback', heading: 'Customer & User Feedback', dataKey: 'customerFeedback' },
+  { id: 'onboarding', heading: 'Onboarding to BEAT', dataKey: 'onboarding' },
+  { id: 'assessment-scoring', heading: 'Assessment scoring', dataKey: 'overallAssessment.scoring' },
+  { id: 'assessment-validity', heading: 'Assessment validity', dataKey: 'overallAssessment.validity' }
+]
 
 // Every rule states what it applies to, who decides, and what to do when it
 // does not fit. The views render this list by iteration.
@@ -300,7 +322,7 @@ export const decisionRules = [
     rule: 'Decisions',
     appliesTo: 'Every decision that changes what the team does.',
     decidedBy: 'The owner named in the written recommendation.',
-    ifItDoesNotFit: 'Nobody objects within one working day and the decision is recorded. An objection moves it to a short synchronous discussion and the owner decides.'
+    ifItDoesNotFit: 'Nobody objects within 24 working hours — a BEAT default, not a research finding — and the decision is recorded. An objection moves it to a short synchronous discussion and the owner decides.'
   },
   {
     rule: 'Done condition',
@@ -606,7 +628,7 @@ export const onCall = {
 export const timeZones = {
   id: 'timeZones',
   title: 'Working across time zones',
-  summary: 'Every rule in BEAT that counts time assumes one working day. Here is the one this team uses.',
+  summary: 'Every rule in BEAT that counts time runs on the team\'s stated coverage hours, in working hours. Here is the reference time zone those hours are counted in.',
   appliesTo: 'Every rule measured in hours or days: response expectations, the review window, auto-proceed, stale items, daily merges and the daily check-in.',
   decidedBy: 'The team names its reference time zone at the start of a beat; the Enabler records it with the beat goals.',
   ifItDoesNotFit: 'A team that spans zones unevenly picks the zone with the fewest members as the reference, or picks no reference and states each rule in absolute hours instead.',
