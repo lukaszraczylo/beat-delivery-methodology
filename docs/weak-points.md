@@ -468,6 +468,8 @@ Every research claim and every figure in `README.md`, `public/src/data` and `pub
 - `README.md` — Principle 6: "We expect responses within 24 working hours." — BEAT's own figure; "24 working hours" is undefined (see WP-31).
 - `README.md` — Principle 10: "Burnout destroys teams. Recovery is productive." — uncited claim.
 - `README.md` — Principle 10: "We plan at 80% and leave slack for life." — BEAT's own figure.
+- `README.md` — Principle 11: "Someone must watch for warning signs: maxed WIP, skipped check-ins, overtime patterns, withdrawal." — BEAT's own warning-sign list, unsourced; the thresholds are undefined (see WP-48).
+- `README.md` — Principle 11: "Someone must shield the team from organizational noise. Someone must say \"no\" to protect \"yes.\"" — BEAT's own rule; no owner or escalation path stated.
 - `README.md` — Principle 12: "Twenty percent of time belongs to the maker for learning, tooling, experiments, and interests." — BEAT's own figure.
 - `README.md` — "Customer & User Feedback": "Building in isolation produces irrelevant software." — uncited claim.
 - `README.md` — "Where BEAT Fits": "BEAT works best for:" and its six items ("Remote-first or distributed teams", "Senior and mid-level developers", "Product companies", "Teams of 3-8 people", "High-trust environments", "Async-native cultures") — uncited effectiveness claims.
@@ -568,7 +570,22 @@ Every research claim and every figure in `README.md`, `public/src/data` and `pub
 - `assessment.js` — `assessmentQuestions[11].options[3].description`: "20% for exploration built in" — unsourced figure.
 - `assessment.js` — `assessmentQuestions[2]`, `assessmentQuestions[6]`, `assessmentQuestions[7]`, `assessmentQuestions[8]`, `assessmentQuestions[9]`, `assessmentQuestions[10]`: their option sets ("Hours worked / time online", "Pull-based", "Cut scope", …) — BEAT's own scales, unsourced and not tied to the twelve principles.
 - `assessment.js` — `overallAssessment`: the ranges [12, 24], [25, 36], [37, 42], [43, 48] — BEAT's own bands, no stated derivation.
+- `assessment.js` — `overallAssessment.struggling.description`: "Your team faces significant challenges that BEAT is designed to solve. The good news: there's tremendous potential for improvement." — uncited effectiveness claim; expect reword ("tremendous" is also marketing language).
+- `assessment.js` — `overallAssessment.developing.description`: "BEAT can provide the structure to level up." — uncited effectiveness claim; expect reword.
+- `assessment.js` — `overallAssessment.strong.description`: "Formalizing them will help you scale and onboard new members." — uncited effectiveness claim; expect reword.
+- `assessment.js` — `overallAssessment.excellent.description`: "Congratulations! Your team is already aligned with BEAT principles. Consider adopting the framework formally." — uncited claim; "Congratulations!" is also marketing language.
+- `assessment.js` — `overallAssessment.*.callToAction`: the four call-to-action strings ("Start with the biggest pain point. Small changes compound over time.", "Focus on making existing good practices consistent and documented.", "Document what works and share it with your organization.", "You're ready to fully adopt BEAT and become ambassadors for these practices.") — BEAT's own advice, uncited.
 - `assessment.js` — `assessmentQuestions[5].options[3].description`: "Clear escalation path" / "Urgent = phone, else async" — BEAT's own rule.
+- `assessment.js` — `beatRecommendations.*.title`: the twelve band titles ("Your Focus is Under Attack", "Focus Needs Protection", "Strong Focus Culture", "Communication is Chaotic", "Communication Needs Structure", "Effective Async Communication", "Trust is Missing", "Autonomy is Inconsistent", "High-Trust Environment", "Burnout Risk is High", "Sustainability Needs Attention", "Sustainable Pace Culture") — twelve copy strings, uncited, no source needed beyond the source-of-truth statement (WP-05).
+- `assessment.js` — `beatRecommendations.focus.medium.description`: "With more structure, your team could dramatically increase productivity." — uncited effectiveness claim; expect reword.
+- `assessment.js` — `beatRecommendations.communication.medium.beatPrinciple`: "Synchronous time is expensive. Spend it wisely. If it can be written, write it." — mirrors README Principle 5, unsourced.
+- `assessment.js` — `beatRecommendations.communication.high.beatPrinciple`: "Response time is not reaction time. Async means responding when working, not responding immediately." — mirrors README Principle 6, unsourced.
+- `assessment.js` — `beatRecommendations.autonomy.low.beatPrinciple`: "Trust makers to make. Those who build the thing decide how to build it." — mirrors README Principle 7, unsourced.
+- `assessment.js` — `beatRecommendations.autonomy.medium.beatPrinciple`: "The maker's \"no\" is valid. This is not insubordination—it is ownership." — mirrors README Principle 9, unsourced.
+- `assessment.js` — `beatRecommendations.autonomy.high.beatPrinciple`: "Pull, don't push. Work is not assigned. Work is pulled by those with capacity and interest." — mirrors README Principle 8, unsourced.
+- `assessment.js` — `beatRecommendations.sustainability.medium.beatPrinciple`: "The team's health is the Enabler's responsibility. Someone must watch for warning signs." — mirrors README Principle 11, unsourced.
+- `assessment.js` — `beatRecommendations.sustainability.high.beatPrinciple`: "Exploration time is not a reward. It is a requirement. This is how we stay sharp." — mirrors README Principle 12, unsourced.
+- `assessment.js` — `beatRecommendations.sustainability.low.beatPrinciple`: "Sustainable pace is not optional. Overtime is a red flag, not a badge of honor." — mirrors README Principle 10, unsourced.
 
 ### public/src/views
 
