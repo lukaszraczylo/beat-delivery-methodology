@@ -11,31 +11,31 @@ export const teamValues = [
   {
     name: 'Trust',
     icon: 'fas fa-handshake',
-    gradient: 'from-blue-500 to-blue-600',
+    gradient: 'bg-accent text-accent-foreground',
     description: 'We assume competence and good intent. We give autonomy because we trust it will be used well. We share information openly because we trust it will be handled responsibly.'
   },
   {
     name: 'Courage',
     icon: 'fas fa-shield-alt',
-    gradient: 'from-purple-500 to-purple-600',
+    gradient: 'bg-foreground text-background',
     description: 'We speak up when something is wrong. We admit when we don\'t know. We challenge decisions respectfully. We try new approaches even when they might fail.'
   },
   {
     name: 'Candor',
     icon: 'fas fa-comments',
-    gradient: 'from-cyan-500 to-cyan-600',
+    gradient: 'bg-muted-foreground text-background',
     description: 'We give honest feedback, kindly delivered. We say what we mean in writing. We surface problems early rather than hiding them. We disagree openly, then commit.'
   },
   {
     name: 'Ownership',
     icon: 'fas fa-flag',
-    gradient: 'from-green-500 to-green-600',
+    gradient: 'bg-muted text-foreground',
     description: 'We take responsibility for our work and its impact. We don\'t wait to be told. We fix what we find broken. We see things through to done.'
   },
   {
     name: 'Calm',
     icon: 'fas fa-spa',
-    gradient: 'from-amber-500 to-amber-600',
+    gradient: 'bg-muted text-foreground',
     description: 'We do not create urgency where none exists. We respond thoughtfully, not reactively. We protect each other\'s focus. We choose sustainable over heroic.'
   }
 ]
@@ -124,19 +124,19 @@ export const roles = [
   {
     name: 'The Maker',
     icon: 'fas fa-hammer',
-    gradient: 'from-blue-500 to-blue-600',
+    gradient: 'bg-accent text-accent-foreground',
     description: 'Builds things. They have full autonomy over implementation. They pull work, propose solutions, review code, and surface blockers. They choose what, how, when, where, and with whom. The done condition is the team\'s, not theirs to change alone.'
   },
   {
     name: 'The Enabler',
     icon: 'fas fa-hands-helping',
-    gradient: 'from-purple-500 to-purple-600',
+    gradient: 'bg-foreground text-background',
     description: 'Removes obstacles. They order the priority stack, shield from interruptions, monitor wellbeing, and facilitate decisions. They do not dictate—they enable: they set order and capacity, never assignment. They plan capacity at the level in the measurement rules. When they are a party to a dispute, they step out of it.'
   },
   {
     name: 'The Connector',
     icon: 'fas fa-project-diagram',
-    gradient: 'from-cyan-500 to-cyan-600',
+    gradient: 'bg-muted-foreground text-background',
     description: 'Maintains knowledge flow. They keep documentation current, ensure context flows between makers, and onboard new members. This role is optional and may rotate.'
   }
 ]
