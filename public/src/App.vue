@@ -1,91 +1,55 @@
 <script setup>
-import { onMounted } from 'vue'
-import NavBar from '@/components/layout/NavBar.vue'
-import Footer from '@/components/layout/Footer.vue'
-import ReadingProgress from '@/components/layout/ReadingProgress.vue'
+import { nextTick, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
+import SiteHeader from '@/components/layout/SiteHeader.vue'
+import SiteFooter from '@/components/layout/SiteFooter.vue'
 
-onMounted(() => {
-  document.documentElement.style.scrollBehavior = 'smooth'
-})
+const route = useRoute()
+const mainRef = ref(null)
+
+// The hash history reads `#main-content` as a route path, so the skip link
+// moves focus itself instead of letting the browser change the URL.
+const skipToMain = () => {
+  mainRef.value?.focus()
+  mainRef.value?.scrollIntoView()
+}
+
+// The document title comes from the route meta, so every page has a unique
+// title and the title cannot drift from the route list.
+const applyTitle = () => {
+  const title = route.meta.title
+  document.title = title ? `${title} — BEAT Manifesto` : 'BEAT Manifesto'
+}
+
+watch(
+  () => route.fullPath,
+  async () => {
+    applyTitle()
+    // Where focus was before the page changed: on a cold load it is the body,
+    // and the browser must keep its own starting focus.
+    const hadFocus = document.activeElement !== null && document.activeElement !== document.body
+    await nextTick()
+    if (!hadFocus) return
+    // Move focus to the main landmark on a page change, so a keyboard or
+    // screen-reader user starts at the new page rather than at the header.
+    mainRef.value?.focus()
+  },
+  { immediate: true }
+)
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300">
-    <ReadingProgress />
-    <NavBar />
-    <main class="flex-1">
-      <router-view v-slot="{ Component }">
-        <transition 
-          name="page" 
-          mode="out-in"
-          appear
-        >
-          <component :is="Component" />
-        </transition>
-      </router-view>
+  <div class="flex min-h-screen flex-col">
+    <a class="skip-link" href="#main-content" @click.prevent="skipToMain">Skip to main content</a>
+    <SiteHeader />
+    <main
+      id="main-content"
+      ref="mainRef"
+      tabindex="-1"
+      class="mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6 sm:py-12"
+    >
+      <router-view />
     </main>
-    <Footer />
+    <SiteFooter />
   </div>
 </template>
-
-<style>
-/* Page transition animations */
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.page-enter-from {
-  opacity: 0;
-  transform: translateY(20px) scale(0.98);
-}
-
-.page-leave-to {
-  opacity: 0;
-  transform: translateY(-10px) scale(0.98);
-}
-
-.page-enter-to,
-.page-leave-from {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-/* Ensure content is visible during transition */
-.page-enter-active > *,
-.page-leave-active > * {
-  will-change: opacity, transform;
-}
-
-/* Improved focus visible styles for accessibility */
-:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-.dark :focus-visible {
-  outline-color: #60a5fa;
-}
-
-/* Remove focus outline for mouse users, keep for keyboard */
-:focus:not(:focus-visible) {
-  outline: none;
-}
-
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Reduce motion for users who prefer it */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-</style>
