@@ -175,25 +175,25 @@ export const beatRecommendations = {
   focus: {
     low: {
       title: 'Your Focus is Under Attack',
-      description: 'Constant interruptions and meetings are destroying your team\'s ability to do deep work. Research shows it takes 52 minutes to reach focus and 23 minutes to recover from interruption.',
+      description: 'Constant interruptions and meetings are undermining your team\'s ability to do deep work. Resuming interrupted work takes about twenty-five minutes [mark-2005], and the most productive users tracked by DeskTime worked in blocks of fifty-two minutes [desktime-2014].',
       recommendations: [
         'Establish 4-hour daily sacred blocks where no meetings or interruptions are allowed',
         'Limit meetings to 2 hours per week maximum',
         'Measure outcomes, not hours worked or time online',
         'Let makers choose when their focus time occurs'
       ],
-      beatPrinciple: 'Protect the focus state above all else. The uninterrupted mind produces the best work.'
+      beatPrinciple: 'Protect the focus state above all else. Sacred blocks come first, because everything else in the plan depends on them.'
     },
     medium: {
       title: 'Focus Needs Protection',
-      description: 'You have some focus time, but it\'s inconsistent. With more structure, your team could dramatically increase productivity.',
+      description: 'You have some focus time, but it\'s inconsistent. With more structure, your team could recover time that interruptions now take from it.',
       recommendations: [
         'Formalize sacred blocks and make them non-negotiable',
         'Audit your meeting calendar - can 50% become async?',
         'Create clear signals for when someone is in focus mode',
         'Track interruption patterns and address the sources'
       ],
-      beatPrinciple: 'Presence does not equal productivity. A maker in focus for four hours outproduces a maker in meetings for eight.'
+      beatPrinciple: 'Presence does not equal productivity. We do not measure hours worked or time online. We measure outcomes delivered.'
     },
     high: {
       title: 'Strong Focus Culture',
@@ -315,12 +315,23 @@ export const beatRecommendations = {
 }
 
 export const overallAssessment = {
+  scoring: {
+    id: 'assessment-scoring',
+    maxScore: 48,
+    questionCount: 12,
+    perQuestionMax: 4,
+    categoryThresholds: 'A category is low below 40 percent of its maximum, medium from 40 to 70 percent, high above 70 percent. The same two cuts give the four overall bands: low 12 to 24, medium 25 to 36, strong 37 to 42, high 43 to 48.'
+  },
+  validity: {
+    id: 'assessment-validity',
+    note: 'This is a self-report with no published validity evidence. It measures what a team believes about its own practice, not delivery, quality or wellbeing. Use it to start a conversation and to compare your own score over time, not as a benchmark against other teams.'
+  },
   struggling: {
     range: [12, 24],
     title: 'Significant Opportunity for Improvement',
     icon: 'fas fa-exclamation-triangle',
     color: 'red',
-    description: 'Your team faces significant challenges that BEAT is designed to solve. The good news: there\'s tremendous potential for improvement.',
+    description: 'Your team faces significant challenges that BEAT is designed to address. The good news: there is room for real improvement here.',
     callToAction: 'Start with the biggest pain point. Small changes compound over time.'
   },
   developing: {
@@ -328,7 +339,7 @@ export const overallAssessment = {
     title: 'Building Better Practices',
     icon: 'fas fa-seedling',
     color: 'amber',
-    description: 'Your team has some good foundations but inconsistent practices. BEAT can provide the structure to level up.',
+    description: 'Your team has some good foundations but inconsistent practices. BEAT can provide the structure to build on them.',
     callToAction: 'Focus on making existing good practices consistent and documented.'
   },
   strong: {
@@ -344,7 +355,7 @@ export const overallAssessment = {
     title: 'BEAT-Ready Team',
     icon: 'fas fa-star',
     color: 'green',
-    description: 'Congratulations! Your team is already aligned with BEAT principles. Consider adopting the framework formally.',
-    callToAction: 'You\'re ready to fully adopt BEAT and become ambassadors for these practices.'
+    description: 'Your team is already aligned with BEAT principles. Consider adopting the framework formally.',
+    callToAction: 'You\'re ready to adopt BEAT fully and to teach these practices to others.'
   }
 }
