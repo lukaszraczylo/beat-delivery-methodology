@@ -3,28 +3,28 @@ export const assessmentCategories = [
     id: 'focus',
     title: 'Focus & Deep Work',
     icon: 'fas fa-brain',
-    gradient: 'from-blue-500 to-cyan-500',
+    gradient: 'bg-accent text-accent-foreground',
     color: 'blue'
   },
   {
     id: 'communication',
     title: 'Communication',
     icon: 'fas fa-comments',
-    gradient: 'from-purple-500 to-pink-500',
+    gradient: 'bg-accent text-accent-foreground',
     color: 'purple'
   },
   {
     id: 'autonomy',
     title: 'Autonomy & Trust',
     icon: 'fas fa-user-shield',
-    gradient: 'from-green-500 to-emerald-500',
+    gradient: 'bg-accent text-accent-foreground',
     color: 'green'
   },
   {
     id: 'sustainability',
     title: 'Sustainability',
     icon: 'fas fa-leaf',
-    gradient: 'from-amber-500 to-orange-500',
+    gradient: 'bg-accent text-accent-foreground',
     color: 'amber'
   }
 ]
