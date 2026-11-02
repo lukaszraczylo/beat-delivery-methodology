@@ -463,6 +463,7 @@ Every research claim and every figure in `README.md`, `public/src/data` and `pub
 - `README.md` — Principle 1: "The uninterrupted mind produces the best work." — uncited claim.
 - `README.md` — Principle 1: "We maintain sacred blocks of four hours daily" — BEAT's own figure.
 - `README.md` — Principle 2: "Research shows 52 minutes to reach deep focus, 23 minutes to recover from interruption." — uncited and wrong source.
+- `README.md` — Principle 2: "Every \"quick question\" costs more than it appears." — uncited claim, the closing sentence of the same research paragraph; expect citation or reword as a BEAT rule.
 - `README.md` — Principle 3: "A maker in focus for four hours outproduces a maker in meetings for eight." — uncited quantitative claim.
 - `README.md` — Principle 5: "We limit them to two hours per week, one hour maximum each." — BEAT's own figures.
 - `README.md` — Principle 6: "We expect responses within 24 working hours." — BEAT's own figure; "24 working hours" is undefined (see WP-31).
@@ -527,6 +528,7 @@ Every research claim and every figure in `README.md`, `public/src/data` and `pub
 - `manifesto.js` — `principles.focus[0].description`: "The uninterrupted mind produces the best work." — uncited claim.
 - `manifesto.js` — `principles.focus[0].description`: "sacred blocks of four hours daily" — BEAT's own figure.
 - `manifesto.js` — `principles.focus[1].description`: "Research shows 52 minutes to reach deep focus, 23 minutes to recover from interruption." — uncited and wrong source.
+- `manifesto.js` — `principles.focus[1].description`: "Every \"quick question\" costs more than it appears." — uncited claim, the closing sentence of the same research paragraph; expect citation or reword as a BEAT rule.
 - `manifesto.js` — `principles.focus[2].description`: "A maker in focus for four hours outproduces a maker in meetings for eight." — uncited quantitative claim.
 - `manifesto.js` — `principles.communication[0].description`: "Decisions not documented did not happen." — uncited claim.
 - `manifesto.js` — `principles.communication[1].description`: "two hours per week, one hour maximum each" — BEAT's own figures.
@@ -586,6 +588,21 @@ Every research claim and every figure in `README.md`, `public/src/data` and `pub
 - `assessment.js` — `beatRecommendations.sustainability.medium.beatPrinciple`: "The team's health is the Enabler's responsibility. Someone must watch for warning signs." — mirrors README Principle 11, unsourced.
 - `assessment.js` — `beatRecommendations.sustainability.high.beatPrinciple`: "Exploration time is not a reward. It is a requirement. This is how we stay sharp." — mirrors README Principle 12, unsourced.
 - `assessment.js` — `beatRecommendations.sustainability.low.beatPrinciple`: "Sustainable pace is not optional. Overtime is a red flag, not a badge of honor." — mirrors README Principle 10, unsourced.
+- `assessment.js` — `beatRecommendations.focus.high.description`: "Your team values deep work. BEAT can help you maintain and strengthen this culture as you scale." — uncited effectiveness claim; expect reword.
+- `assessment.js` — `beatRecommendations.focus.high.beatPrinciple`: "Interruptions are not free. Every \"quick question\" costs more than it appears." — uncited claim, the closing sentence of the same research paragraph as README Principle 2.
+- `assessment.js` — `beatRecommendations.communication.low.description`: "Without written documentation and async practices, knowledge is lost, decisions are forgotten, and everyone stays chained to chat." — uncited claim; expect citation.
+- `assessment.js` — `beatRecommendations.communication.low.beatPrinciple`: "Writing is thinking made visible. Decisions not documented did not happen." — uncited claim, mirrors README Principle 5.
+- `assessment.js` — `beatRecommendations.communication.medium.description`: "You have some good practices, but inconsistency leads to confusion about when to interrupt vs. when to wait." — uncited claim; expect citation.
+- `assessment.js` — `beatRecommendations.communication.high.description`: "Your team communicates well asynchronously. Keep refining and documenting these practices." — uncited effectiveness claim; expect reword.
+- `assessment.js` — `beatRecommendations.autonomy.low.description`: "Top-down control stifles creativity and ownership. Developers who can't make decisions become disengaged and stop innovating." — uncited claim; expect citation.
+- `assessment.js` — `beatRecommendations.autonomy.medium.description`: "Some freedom exists, but it varies. Building genuine trust requires consistent practices." — uncited claim; expect citation.
+- `assessment.js` — `beatRecommendations.autonomy.high.description`: "Your team operates with real autonomy. This is rare and valuable—protect it." — uncited claim; expect citation.
+- `assessment.js` — `beatRecommendations.sustainability.low.description`: "Regular overtime and no time for learning is a recipe for burnout, turnover, and declining quality." — uncited claim; expect citation.
+- `assessment.js` — `beatRecommendations.sustainability.medium.description`: "You're managing, but there are warning signs. Building in more slack now prevents bigger problems later." — uncited claim; expect citation.
+- `assessment.js` — `beatRecommendations.sustainability.high.description`: "Your team has built healthy work habits. This enables long-term high performance." — uncited effectiveness claim; expect reword.
+- `assessment.js` — `beatRecommendations.*.description`: the twelve band descriptions (all listed above) — twelve copy strings, uncited, no source needed beyond the source-of-truth statement (WP-05).
+- `assessment.js` — `beatRecommendations.*.beatPrinciple`: the twelve band principle lines (all listed above) — twelve copy strings, uncited, no source needed beyond the source-of-truth statement (WP-05).
+- `assessment.js` — `overallAssessment.*.title`: the four overall band titles ("Significant Opportunity for Improvement", "Building Better Practices", "Strong Foundation", "BEAT-Ready Team") — four copy strings, uncited, no source needed beyond the source-of-truth statement (WP-05).
 
 ### public/src/views
 
@@ -623,6 +640,8 @@ Every research claim and every figure in `README.md`, `public/src/data` and `pub
 - `PracticesView.vue` — "Meetings": `meetingLimits` "2 hours" / "per week total" and "1 hour" / "maximum per meeting" — BEAT's own figures.
 - `OnboardingView.vue` — "Connector's Responsibility": "New member has a \"buddy\" for questions (informal, not mandatory pairing)" — conflicts with the collaboration rule.
 - `OnboardingView.vue` — the four week blocks and "First Month Expectations" — BEAT's own rules, unsourced.
+- `AssessmentView.vue` — the hero subtitle: "Discover how BEAT can help your team deliver better and faster." — uncited effectiveness claim; expect reword.
+- `AssessmentView.vue` — the intro paragraph: "Answer 12 quick questions about your current practices. We'll analyze your responses and show you specifically how BEAT principles can help your team." — uncited effectiveness claim and the "12 quick questions" figure (the assessment holds 12 questions, but the count is BEAT's own, not sourced).
 
 ### Consistency items that carry no figure but break the citation pass
 
