@@ -74,21 +74,18 @@ export const routes = [
     meta: { title: 'Quick Reference', section: 'reference', sectionOrder: 1 }
   },
   {
-    // Catch-all. No not-found view exists yet, so this renders the home view;
-    // the intended view is @/views/NotFoundView.vue (card 075da6c7).
+    // Catch-all. An unknown path renders the not-found page, which names the
+    // requested path and links back to the home page.
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
-    component: () => import('@/views/HomeView.vue'),
+    component: () => import('@/views/NotFoundView.vue'),
     meta: { title: 'Page not found', section: 'start', sectionOrder: 99 }
   }
 ]
 
-// Pages of one section in reading order, for the section navigation.
-export const pagesInSection = (sectionId) =>
-  routes
-    .filter((route) => route.name !== 'NotFound' && route.meta.section === sectionId)
-    .sort((a, b) => a.meta.sectionOrder - b.meta.sectionOrder)
-
+// The route table stays a plain literal here: the published route check reads
+// it back from the built bundle, where the bundler keeps it inline in the
+// createRouter() options. Section grouping lives in @/router/sections.
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
