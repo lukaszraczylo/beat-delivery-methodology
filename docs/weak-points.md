@@ -461,9 +461,14 @@ Every research claim and every figure in `README.md`, `public/src/data` and `pub
 - `README.md` — "What We Have Learned": "72% of meetings are ineffective at their stated purpose" — uncited, wrong number; expect reword to the sourced figure.
 - `README.md` — "What We Have Learned": "Autonomy, competence, and relatedness drive intrinsic motivation" — uncited; expect citation to Self-Determination Theory.
 - `README.md` — Principle 1: "The uninterrupted mind produces the best work." — uncited claim.
+- `README.md` — Principle 1: "We maintain sacred blocks of four hours daily" — BEAT's own figure.
 - `README.md` — Principle 2: "Research shows 52 minutes to reach deep focus, 23 minutes to recover from interruption." — uncited and wrong source.
 - `README.md` — Principle 3: "A maker in focus for four hours outproduces a maker in meetings for eight." — uncited quantitative claim.
+- `README.md` — Principle 5: "We limit them to two hours per week, one hour maximum each." — BEAT's own figures.
+- `README.md` — Principle 6: "We expect responses within 24 working hours." — BEAT's own figure; "24 working hours" is undefined (see WP-31).
 - `README.md` — Principle 10: "Burnout destroys teams. Recovery is productive." — uncited claim.
+- `README.md` — Principle 10: "We plan at 80% and leave slack for life." — BEAT's own figure.
+- `README.md` — Principle 12: "Twenty percent of time belongs to the maker for learning, tooling, experiments, and interests." — BEAT's own figure.
 - `README.md` — "Customer & User Feedback": "Building in isolation produces irrelevant software." — uncited claim.
 - `README.md` — "Where BEAT Fits": "BEAT works best for:" and its six items ("Remote-first or distributed teams", "Senior and mid-level developers", "Product companies", "Teams of 3-8 people", "High-trust environments", "Async-native cultures") — uncited effectiveness claims.
 - `README.md` — "Where BEAT Fits": "BEAT fits poorly for:" and its four items ("Junior-heavy teams needing close guidance", "Regulated industries requiring ceremony", "Agency work with constant client sync", "Organizations unwilling to protect focus time") — uncited effectiveness claims.
@@ -559,6 +564,9 @@ Every research claim and every figure in `README.md`, `public/src/data` and `pub
 - `assessment.js` — `beatRecommendations.sustainability.medium.recommendations[2]`: "Review capacity planning—are you over 80%?" — unsourced figure.
 - `assessment.js` — `assessmentQuestions[0].question`: "How often do you get uninterrupted blocks of 2+ hours for focused work?" and its option descriptions — BEAT's own thresholds, unsourced.
 - `assessment.js` — `assessmentQuestions[1].question`: "How many meetings do you have in a typical week?" with the "10+ hours", "5-10 hours", "2-5 hours", "Under 2 hours" bands — BEAT's own bands, unsourced.
+- `assessment.js` — `assessmentQuestions[4].options[2].description`: "24-hour response is acceptable" — BEAT's own figure; the README says "24 working hours", so the two differ.
+- `assessment.js` — `assessmentQuestions[11].options[3].description`: "20% for exploration built in" — unsourced figure.
+- `assessment.js` — `assessmentQuestions[2]`, `assessmentQuestions[6]`, `assessmentQuestions[7]`, `assessmentQuestions[8]`, `assessmentQuestions[9]`, `assessmentQuestions[10]`: their option sets ("Hours worked / time online", "Pull-based", "Cut scope", …) — BEAT's own scales, unsourced and not tied to the twelve principles.
 - `assessment.js` — `overallAssessment`: the ranges [12, 24], [25, 36], [37, 42], [43, 48] — BEAT's own bands, no stated derivation.
 - `assessment.js` — `assessmentQuestions[5].options[3].description`: "Clear escalation path" / "Urgent = phone, else async" — BEAT's own rule.
 
