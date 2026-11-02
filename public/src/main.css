@@ -1,0 +1,50 @@
+/**
+ * Colour tokens for the BEAT site.
+ *
+ * The nine names below are the contract that every component and every
+ * Tailwind colour mapping reads from. Define them once here and keep the
+ * names stable: a rename is a breaking change for the whole site.
+ *
+ *   --color-background
+ *   --color-foreground
+ *   --color-muted
+ *   --color-muted-foreground
+ *   --color-border
+ *   --color-accent
+ *   --color-accent-foreground
+ *   --color-text-body
+ *   --color-text-large
+ *
+ * Light values live in :root. Dark values live in the .dark block, which the
+ * theme helper applies to the root element, so a theme change flips every
+ * token in one step.
+ *
+ * Every pair below was measured against the WCAG 2.2 minimums with headroom:
+ * body and muted text at 4.5:1, large text and borders at 3:1, and accent
+ * text at 4.5:1. Borders are checked against both the background and the
+ * muted surface, because a border is often drawn on the muted surface.
+ */
+
+:root {
+  --color-background: #ffffff;
+  --color-foreground: #111827;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #475569;
+  --color-border: #64748b;
+  --color-accent: #1d4ed8;
+  --color-accent-foreground: #ffffff;
+  --color-text-body: #374151;
+  --color-text-large: #1f2937;
+}
+
+.dark {
+  --color-background: #0f172a;
+  --color-foreground: #f8fafc;
+  --color-muted: #1e293b;
+  --color-muted-foreground: #94a3b8;
+  --color-border: #7c8ca3;
+  --color-accent: #60a5fa;
+  --color-accent-foreground: #0f172a;
+  --color-text-body: #cbd5e1;
+  --color-text-large: #e2e8f0;
+}
