@@ -11,7 +11,7 @@ Each entry gives:
 - **Original wording** — quoted verbatim from the file.
 - **Planned resolution** — the file and section that will carry the fixed text.
 
-Entries marked **unresolved** are passages whose intent could not be settled from the text alone; they are listed so the repair card can decide them.
+No passage was left unresolved: every claim and figure in scope was settled from the text itself, so each entry names a planned resolution rather than an open question.
 
 Categories are ordered: unsupported claim, wrong number, self-contradiction, rule not applicable as written, uncovered situation. The uncited-claims list is at the end, one line per claim or figure, including the claims expected to be reworded or removed.
 
@@ -275,7 +275,7 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "Items stale for five days return to backlog."
 - **Why:** Staleness has no definition (no last-activity field on the board), no one performs the sweep, and there is no way to pin an item that is intentionally parked.
-- **Planned resolution:** `README.md` — "The Board": define staleness, name the owner of the sweep, and allow a pin; mirrored in `public/src/views/FrameworkView.vue` — "Stale Items" ("Return to backlog after 5 days"), and added to `public/src/data/manifesto.js` — `constraints` (see WP-47).
+- **Planned resolution:** `README.md` — "The Board": define staleness, name the owner of the sweep, and allow a pin; mirrored in `public/src/views/FrameworkView.vue` — "Stale Items" ("Return to backlog after 5 days"), and added to `public/src/data/manifesto.js` — `constraints` (see WP-52).
 
 ### WP-33 — Auto-proceed has no owner or exceptions
 
@@ -299,7 +299,7 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "We size with **S/M/L**, not story points. We do not groom. We do not point. We do not track velocity."
 - **Why:** Three prohibitions with no scope (team-internal planning only, or every reporting obligation?) and no exception path for a team that must report to an external programme or a regulated customer.
-- **Planned resolution:** `README.md` — "Work Items": state the scope and the exception; mirrored in `public/src/views/FrameworkView.vue` — "Work Items" (identical sentence), and added to `public/src/data/manifesto.js` — `constraints` (see WP-47).
+- **Planned resolution:** `README.md` — "Work Items": state the scope and the exception; mirrored in `public/src/views/FrameworkView.vue` — "Work Items" (identical sentence), and added to `public/src/data/manifesto.js` — `constraints` (see WP-52).
 
 ### WP-36 — "Claim files" has no mechanism
 
