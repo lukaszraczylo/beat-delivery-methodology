@@ -1,6 +1,15 @@
 # BEAT weak-point record
 
-Inventory of every weak point found in `README.md` and in the site content (`public/src/data`, `public/src/views`), written before any repair. Nothing in this file is fixed text; each entry states the planned resolution — the file and section that will carry the corrected wording.
+Inventory of every weak point found in `README.md` and in the site content (`public/src/data`, `public/src/views`), written before any repair, and reconciled with the repairs actually made at the branch head. Nothing in this file is fixed text; each entry states the resolution that was made — the file and section that now carries the corrected wording, the deviation from the resolution planned at audit time, and the disposition of every claim or figure that was reworded as opinion or removed.
+
+## Reconciliation
+
+- **Entry count:** 52 entries, unchanged — WP-01 to WP-52.
+- **Category counts:** unchanged — 10 unsupported claim, 8 wrong number, 15 self-contradiction, 14 rule not applicable as written, 5 uncovered situation.
+- **Reconciled against:** the branch head `de96a46`, reading `README.md` (`36d4223`), `public/src/data` (`588fb8d`, `ec83e8e`, `349af72`), `public/src/views` (`fa782d0`, `2bc9527`) as they stand.
+- **What changed per entry:** the `Planned resolution` line of the audit is replaced by `Resolution made`, which names the file and section or data key that now carries the fixed text. `Deviation from plan` is present only where the repair landed somewhere other than the plan said. `Disposition` states what happened to the claim or figure — reworded, removed or added — and quotes the new wording. `Resolved position` is present on every self-contradiction entry.
+- **Left as the audit wrote them:** the "Uncited claims and figures" list and the "Planned resolutions summary" table at the end of this file are kept unchanged, so the audit trail stays readable. Where an entry shows that a listed claim or a planned location no longer matches the text at the branch head, the entry says so; the list and the table were not edited to match.
+- **Not reconciled here:** two wording differences between `README.md` and the site data remain open — the self-assessment band arithmetic (WP-18, WP-51) and the "one working day" / "24 working hours" wording (WP-31, WP-41). Both are recorded in the entries; neither file is owned by this record.
 
 ## How to read this record
 
@@ -9,9 +18,12 @@ Each entry gives:
 - **Location** — file and section (or data key / view component) where the weak point sits.
 - **Category** — one of: unsupported claim, wrong number, self-contradiction, uncovered situation, rule not applicable as written.
 - **Original wording** — quoted verbatim from the file.
-- **Planned resolution** — the file and section that will carry the fixed text.
+- **Resolution made** — the file and section that now carries the fixed text, as it reads at the branch head.
+- **Deviation from plan** — where the repair landed somewhere other than the planned resolution said. Present only where it applies.
+- **Disposition** — what happened to the claim or figure: reworded, removed or added, with the new wording quoted.
+- **Resolved position** — the position the text now takes. Present on every self-contradiction entry.
 
-No passage was left unresolved: every claim and figure in scope was settled from the text itself, so each entry names a planned resolution rather than an open question.
+Every claim and figure in scope was settled from the text itself, so each entry names the resolution that was made rather than an open question. Two differences between `README.md` and the site data are still open at the branch head and are named in their entries (WP-18 and WP-51, WP-31 and WP-41).
 
 Categories are ordered: unsupported claim, wrong number, self-contradiction, rule not applicable as written, uncovered situation. The uncited-claims list is at the end, one line per claim or figure, including the claims expected to be reworded or removed.
 
@@ -24,70 +36,81 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Location:** `README.md` — "What We Have Learned"
 - **Category:** unsupported claim
 - **Original wording:** "BEAT emerges from research on how developers actually work:"
-- **Planned resolution:** `README.md` — "What We Have Learned": name the sources behind each surviving claim and reword the rest as BEAT's own observations; mirrored in `public/src/data/manifesto.js` — `researchStats`, and `public/src/views/HomeView.vue` — "Our Philosophy".
+- **Resolution made:** `README.md` — "What We Have Learned" now opens "Some of what follows comes from published work, with the source named. The rest is what we have seen in the teams that run BEAT — our own observations, not research findings." Each surviving claim carries a named source; mirrored in `public/src/data/manifesto.js` — `researchStats`, which now holds five entries (25 minutes [mark-2005], 52 minutes [desktime-2014], 3h 43m [desktime-2014], 71% [rogelberg-2019], 73% [mit-sloan-2017]).
+- **Disposition:** reworded — the list is no longer framed as research: "Some of what follows comes from published work, with the source named. The rest is what we have seen in the teams that run BEAT — our own observations, not research findings."
 
 ### WP-02 — Developer introversion stated as fact
 
 - **Location:** `README.md` — "What We Have Learned"
 - **Category:** unsupported claim
 - **Original wording:** "Developers trend toward introversion and need low-stimulation focus time"
-- **Planned resolution:** `README.md` — "What We Have Learned": the personality evidence is mixed (MBTI-based studies show a modest skew, other studies find no difference), so reword as an explicit BEAT premise or cite the specific study; not mirrored on the site.
+- **Resolution made:** `README.md` — "What We Have Learned": the personality claim is replaced by an observation the authors can stand behind, "developers we work with ask for long stretches of low-stimulation time", inside the paragraph that separates published work from BEAT's own observations. Not mirrored on the site, as planned.
+- **Disposition:** reworded — "developers we work with ask for long stretches of low-stimulation time" (the previous "Developers trend toward introversion and need low-stimulation focus time" is gone).
 
 ### WP-03 — Self-determination theory presented as unnamed research
 
 - **Location:** `README.md` — "What We Have Learned"
 - **Category:** unsupported claim
 - **Original wording:** "Autonomy, competence, and relatedness drive intrinsic motivation"
-- **Planned resolution:** `README.md` — "What We Have Learned": attribute to Self-Determination Theory (Deci and Ryan) and state that it is a general motivation theory, not a developer-specific finding.
+- **Resolution made:** `README.md` — Principle 7 now attributes the theory: "We give makers autonomy because autonomy, competence and relatedness are the needs that make sustained motivation possible [deci-ryan-2000] — a general motivation finding, not a result about developers." The source is listed under `README.md` — "References" with id `deci-ryan-2000`.
+- **Disposition:** reworded — "autonomy, competence and relatedness are the needs that make sustained motivation possible [deci-ryan-2000] — a general motivation finding, not a result about developers."
 
 ### WP-04 — "Research shows" with no citation, twice
 
 - **Location:** `README.md` — Principle 2, "Interruptions are not free"
 - **Category:** unsupported claim
 - **Original wording:** "Research shows 52 minutes to reach deep focus, 23 minutes to recover from interruption."
-- **Planned resolution:** `README.md` — Principle 2: attach a citation, or reword; mirrored in `public/src/data/manifesto.js` — `principles.focus[1].description` and `public/src/data/assessment.js` — `beatRecommendations.focus.low.description`.
+- **Resolution made:** `README.md` — Principle 2 now reads "Resuming interrupted work takes about twenty-five minutes [mark-2005], and the most productive users tracked by DeskTime worked in blocks of fifty-two minutes [desktime-2014]."; mirrored in `public/src/data/manifesto.js` — `principles.focus[1].description` and `researchStats`, and in `public/src/data/assessment.js` — `beatRecommendations.focus.low.description`.
+- **Disposition:** reworded — "Resuming interrupted work takes about twenty-five minutes [mark-2005], and the most productive users tracked by DeskTime worked in blocks of fifty-two minutes [desktime-2014]."
 
 ### WP-05 — The nine limits are presented as if derived from research
 
 - **Location:** `README.md` — "Appendix: Quick Reference" → "The Numbers"
 - **Category:** unsupported claim
 - **Original wording:** "| Sacred block | 4 hours daily |", "| Meetings per week | ≤2 hours total |", "| WIP per maker | 3 items |", "| Planning capacity | 80% |", "| Exploration time | 20% (1 day/beat) |", "| NOW items | Max 3-5 |", "| Review response | 4 hours |", "| Auto-proceed | 24 hours |"
-- **Planned resolution:** `README.md` — "Appendix: Quick Reference" → "The Numbers": state that these are BEAT's own defaults; mirrored in `public/src/data/manifesto.js` — `constraints`, `public/src/views/FrameworkView.vue` — "The Numbers", `public/src/views/ReferenceView.vue` — "The Numbers".
+- **Resolution made:** `README.md` — "Appendix: Quick Reference" → "The Numbers" now opens "Every limit below is a BEAT default chosen by the BEAT authors. None of them is a research finding"; mirrored in `public/src/data/manifesto.js` — `constraints`, which carries the same sentence above its nine rows.
+- **Deviation from plan:** the planned view sections `public/src/views/FrameworkView.vue` — "The Numbers" and `public/src/views/ReferenceView.vue` — "The Numbers" do not exist at the branch head. The view mirror is now `FrameworkView.vue` — "Planning numbers" and `ReferenceView.vue` — "Constraints", and the source-of-truth sentence lives in `README.md` and in `manifesto.js` — `constraints`.
+- **Disposition:** reworded — "Every limit below is a BEAT default chosen by the BEAT authors. None of them is a research finding".
 
 ### WP-06 — Suitability claims with no evidence
 
 - **Location:** `README.md` — "Where BEAT Fits"
 - **Category:** unsupported claim
 - **Original wording:** "BEAT works best for:", "Remote-first or distributed teams", "Senior and mid-level developers", "Product companies", "Teams of 3-8 people", "High-trust environments", "Async-native cultures", "BEAT fits poorly for:", "Junior-heavy teams needing close guidance", "Regulated industries requiring ceremony", "Agency work with constant client sync", "Organizations unwilling to protect focus time", "BEAT can adapt for:"
-- **Planned resolution:** `README.md` — "Where BEAT Fits": reword as observed practice rather than a research-backed fit, or cite; mirrored in `public/src/data/manifesto.js` — `whereItFits`, rendered by `public/src/views/AntiPatternsView.vue` — "Where BEAT Fits".
+- **Resolution made:** `README.md` — "Where BEAT Fits" now opens "These are the contexts we have seen BEAT used in, not a researched fit. The list records our practice; it is not a finding about what improves delivery." and its three lists are headed "BEAT has worked for us in:", "BEAT has fitted poorly in:" and "BEAT has been adapted for:"; mirrored in `public/src/data/manifesto.js` — `whereItFits` (the same note is carried in `whereItFits.note`), rendered by `public/src/views/AntiPatternsView.vue` — "Where BEAT fits".
+- **Disposition:** reworded — "These are the contexts we have seen BEAT used in, not a researched fit." The list labels "BEAT works best for:", "BEAT fits poorly for:" and "BEAT can adapt for:" were replaced by the three "has worked / has fitted poorly / has been adapted" headings.
 
 ### WP-07 — "Burnout destroys teams" stated as fact
 
 - **Location:** `README.md` — Principle 10, "Sustainable pace is not optional"
 - **Category:** unsupported claim
 - **Original wording:** "Burnout destroys teams. Recovery is productive."
-- **Planned resolution:** `README.md` — Principle 10: cite occupational-health evidence or reword as the BEAT stance; mirrored in `public/src/data/manifesto.js` — `principles.sustainability[0].description`.
+- **Resolution made:** `README.md` — Principle 10 now states the BEAT stance, "Overtime is a red flag, not a badge of honor. When deadlines conflict with capacity, we cut scope and we never cut rest."; mirrored in `public/src/data/manifesto.js` — `principles.sustainability[0].description`, and in `README.md` — "Burnout Prevention" → "**Plan at 80%.**".
+- **Disposition:** removed — "Burnout destroys teams. Recovery is productive." was removed and replaced by "Overtime is a red flag, not a badge of honor. When deadlines conflict with capacity, we cut scope and we never cut rest."
 
 ### WP-08 — "Building in isolation produces irrelevant software"
 
 - **Location:** `README.md` — "Customer & User Feedback"
 - **Category:** unsupported claim
 - **Original wording:** "Building in isolation produces irrelevant software. We stay connected to users:"
-- **Planned resolution:** `README.md` — "Customer & User Feedback": cite or reword as opinion. This section has no site counterpart at all — see WP-48.
+- **Resolution made:** `README.md` — "Customer & User Feedback" now opens "Work built away from users drifts away from what users need. We keep the line to users open." and closes with "**What this is not.** This is a practice the team commits to, not a researched effect on delivery." The section now has a site counterpart — `public/src/data/manifesto.js` — `customerFeedback` (see WP-50).
+- **Disposition:** reworded — "Work built away from users drifts away from what users need. We keep the line to users open."
 
 ### WP-09 — "The uninterrupted mind produces the best work"
 
 - **Location:** `README.md` — Principle 1, "Protect the focus state above all else"
 - **Category:** unsupported claim
 - **Original wording:** "The uninterrupted mind produces the best work."
-- **Planned resolution:** `README.md` — Principle 1: cite the focus research or reword as a BEAT principle; mirrored in `public/src/data/manifesto.js` — `principles.focus[0].description` and `public/src/data/assessment.js` — `beatRecommendations.focus.low.beatPrinciple`.
+- **Resolution made:** `README.md` — Principle 1 now reads "Sacred blocks come first, because everything else in the plan depends on them. A maker protects a focus block of four hours each working day — a BEAT default, listed in the constraints table — and chooses when it falls."; mirrored in `public/src/data/manifesto.js` — `principles.focus[0].description`, and in `public/src/data/assessment.js` — `beatRecommendations.focus.low.beatPrinciple`, which no longer carries the claim.
+- **Disposition:** removed — "The uninterrupted mind produces the best work." was removed; the principle now carries the BEAT stance quoted above with the four-hour block marked as a BEAT default.
 
 ### WP-10 — Quantitative comparison of focus versus meetings
 
 - **Location:** `README.md` — Principle 3, "Presence does not equal productivity"
 - **Category:** unsupported claim
 - **Original wording:** "A maker in focus for four hours outproduces a maker in meetings for eight."
-- **Planned resolution:** `README.md` — Principle 3: reword as the BEAT assumption it is, or cite; mirrored in `public/src/data/manifesto.js` — `principles.focus[2].description` and `public/src/data/assessment.js` — `beatRecommendations.focus.medium.beatPrinciple`.
+- **Resolution made:** `README.md` — Principle 3 now reads "We do not measure hours worked or time online. We measure outcomes delivered. Presence is not evidence of output, so a maker is judged by what ships, not by hours spent in meetings."; mirrored in `public/src/data/manifesto.js` — `principles.focus[2].description`, and in `public/src/data/assessment.js` — `beatRecommendations.focus.medium`, whose `description` is now "You have some focus time, but it's inconsistent. With more structure, your team could recover time that interruptions now take from it."
+- **Disposition:** removed — "A maker in focus for four hours outproduces a maker in meetings for eight." was removed; no hours-versus-hours comparison remains.
 
 ---
 
@@ -99,7 +122,8 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** wrong number
 - **Original wording:** "Research shows 52 minutes to reach deep focus, 23 minutes to recover from interruption." and "Deep focus requires 52 minutes to reach and 23 minutes to recover from interruption"
 - **Why:** The 52-minute figure comes from DeskTime's 2014 analysis of its own users: the most productive 10% worked in 52-minute blocks followed by 17-minute breaks. It is the length of a productive work block, not the time it takes to reach focus.
-- **Planned resolution:** `README.md` — Principle 2 and "What We Have Learned": replace with the finding as it was measured, with a citation, or drop the number; mirrored in `public/src/data/manifesto.js` — `principles.focus[1].description` and `researchStats[0]`, `public/src/data/assessment.js` — `beatRecommendations.focus.low.description`.
+- **Resolution made:** `README.md` — Principle 2 and "What We Have Learned" now state the finding as measured, "the most productive users tracked by DeskTime worked in blocks of fifty-two minutes [desktime-2014]"; mirrored in `public/src/data/manifesto.js` — `researchStats` and `principles.focus[1].description`, and in `public/src/data/assessment.js` — `beatRecommendations.focus.low.description`.
+- **Disposition:** reworded — "the most productive users tracked by DeskTime worked in blocks of fifty-two minutes [desktime-2014]" (the figure is now the length of a productive block, not the time to reach focus).
 
 ### WP-12 — "23 minutes to recover" carries false precision
 
@@ -107,7 +131,8 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** wrong number
 - **Original wording:** "23 minutes to recover from interruption"
 - **Why:** The 23 minutes 15 seconds figure was given to the 2006 Gallup Business Journal in an interview; the peer-reviewed CHI 2005 paper ("No Task Left Behind?", Mark, González and Harris) reports 25 minutes 26 seconds for the same measure. The seconds-level precision is not from a published paper.
-- **Planned resolution:** `README.md` — Principle 2 and "What We Have Learned": cite the CHI paper and use its figure, or round to a sourced number; mirrored in `public/src/data/manifesto.js` — `principles.focus[1].description` and `researchStats[1]`, `public/src/data/assessment.js` — `beatRecommendations.focus.low.description`.
+- **Resolution made:** `README.md` — Principle 2 now gives the peer-reviewed figure, "Resuming interrupted work takes about twenty-five minutes [mark-2005]"; mirrored in `public/src/data/manifesto.js` — `researchStats` and `principles.focus[1].description`, and in `public/src/data/assessment.js` — `beatRecommendations.focus.low.description`.
+- **Disposition:** reworded — "Resuming interrupted work takes about twenty-five minutes [mark-2005]". The 23 minutes 15 seconds figure and its seconds-level precision were dropped.
 
 ### WP-13 — "More than two meetings per day reduces productive output to 14%" has no source
 
@@ -115,7 +140,8 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** wrong number
 - **Original wording:** "More than two meetings per day reduces productive output to 14%"
 - **Why:** No published finding supports this. The closest real results are Slack's Workplace Lab survey (more than two *hours* a day in meetings hurts productivity, with no 14% figure), MIT Sloan's meeting-free-day study across 76 companies (up to 73% productivity gain, 57% less stress), and a Stack Overflow survey of developers (they want to decline 31% of meetings but cancel only 14% — a different quantity that reads like the source of this number).
-- **Planned resolution:** `README.md` — "What We Have Learned": remove the claim or replace it with the sourced finding it was derived from; mirrored in `public/src/data/manifesto.js` — `researchStats[2]`.
+- **Resolution made:** `README.md` — "What We Have Learned": the 14% claim was removed and replaced by the sourced meeting-free-day finding, cited to `mit-sloan-2017`; mirrored in `public/src/data/manifesto.js` — `researchStats`, which carries 73% [mit-sloan-2017] and no 14% entry.
+- **Disposition:** removed — "More than two meetings per day reduces productive output to 14%" was removed; the replacement is the MIT Sloan meeting-free-day finding, 73% [mit-sloan-2017], stated as what that study measured.
 
 ### WP-14 — "Peak cognitive work capacity is approximately four hours per day" rounds a different number
 
@@ -123,7 +149,8 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** wrong number
 - **Original wording:** "Peak cognitive work capacity is approximately four hours per day"
 - **Why:** The nearest published figure is DeskTime's ~3 hours 43 minutes of focused work per day for top performers; Slack's survey found that people would *like* four hours of focus time, which is a preference, not a capacity limit. The stated figure reads as a research finding.
-- **Planned resolution:** `README.md` — "What We Have Learned": correct the number and cite it, or reword as BEAT's own planning assumption; mirrored in `public/src/data/manifesto.js` — `researchStats[3]`.
+- **Resolution made:** `README.md` — "What We Have Learned": the four-hour capacity claim was replaced by the DeskTime figure of 3h 43m of focused work per day for top performers, cited to `desktime-2014`; mirrored in `public/src/data/manifesto.js` — `researchStats`, which carries 3h 43m [desktime-2014].
+- **Disposition:** reworded — the "approximately four hours per day" capacity claim is gone; the four-hour block survives only as a BEAT default, "a BEAT default, listed in the constraints table" (Principle 1, `constraints`).
 
 ### WP-15 — "72% of meetings are ineffective at their stated purpose"
 
@@ -131,7 +158,8 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** wrong number
 - **Original wording:** "72% of meetings are ineffective at their stated purpose"
 - **Why:** The citable figures are 71% (182 senior managers surveyed in a Harvard Business School study, reported by Rogelberg, *The Surprising Science of Meetings*, OUP 2019) and 70% (Harvard Business Review, March 2022). The survey asked whether meetings were unproductive and inefficient, not whether they were "ineffective at their stated purpose".
-- **Planned resolution:** `README.md` — "What We Have Learned": use 71% with the Rogelberg citation and reword to match what was measured, or use 70% with the HBR source; mirrored in `public/src/data/manifesto.js` — `researchStats[4]`.
+- **Resolution made:** `README.md` — "What We Have Learned" now gives the survey figure with its scope, "Seventy-one percent of 182 surveyed senior managers reported that meetings are unproductive and inefficient [rogelberg-2019]"; mirrored in `public/src/data/manifesto.js` — `researchStats`, which carries 71% [rogelberg-2019].
+- **Disposition:** reworded — "Seventy-one percent of 182 surveyed senior managers … [rogelberg-2019]" replaces "72% of meetings are ineffective at their stated purpose", and the claim now says what the survey asked.
 
 ### WP-16 — The NOW limit is stated two ways
 
@@ -139,7 +167,8 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** wrong number
 - **Original wording:** "**NOW** — Critical, blocking, time-sensitive. Maximum five items." and "| NOW items | Max 3-5 |"
 - **Why:** The same limit is five in one section and a three-to-five range in the other, in the same document.
-- **Planned resolution:** `README.md` — "Prioritization" and "Appendix: Quick Reference" → "The Numbers": one limit, stated once; mirrored in `public/src/data/manifesto.js` — `priorityBuckets[0].description` and `constraints`.
+- **Resolution made:** `README.md` — "Prioritization" and "Appendix: Quick Reference" → "The Numbers" now state one limit: "Maximum five items — a BEAT default, listed in the constraints table" (Prioritization) and the row "NOW items | Max 5" (The Numbers); mirrored in `public/src/data/manifesto.js` — `priorityBuckets[0].description` and `constraints`.
+- **Disposition:** reworded — "Maximum five items — a BEAT default, listed in the constraints table." The "Max 3-5" range is gone.
 
 ### WP-17 — Exploration time: 20% and one day per beat cannot both hold
 
@@ -147,7 +176,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** wrong number
 - **Original wording:** "Twenty percent of time belongs to the maker for learning, tooling, experiments, and interests." and "| Exploration time | 20% (1 day/beat) |"
 - **Why:** One day per beat is 20% only if a beat is exactly five working days, but a beat is "flexible iterations of one to two weeks". At ten working days the same rule gives 10%.
-- **Planned resolution:** `README.md` — Principle 12 and "Appendix: Quick Reference" → "The Numbers": express the allocation in one unit; mirrored in `public/src/data/manifesto.js` — `principles.sustainability[2].description`, `constraints`, `public/src/views/HomeView.vue` — `keyNumbers` ("20%").
+- **Resolution made:** `README.md` — Principle 12 now states one unit, "A fifth of each maker's working time belongs to learning, tooling, experiments, and interests — a BEAT default, listed in the constraints table.", and "Appendix: Quick Reference" → "The Numbers" carries the row "Exploration time | 20% of working time"; mirrored in `public/src/data/manifesto.js` — `principles.sustainability[2].description` and `constraints`.
+- **Deviation from plan:** the one-day-per-beat wording and the `public/src/views/HomeView.vue` — `keyNumbers` copy were dropped instead of being carried in a second unit; the percentage is now the only unit on both sides.
+- **Disposition:** reworded — "A fifth of each maker's working time belongs to learning, tooling, experiments, and interests — a BEAT default, listed in the constraints table."
 
 ### WP-18 — The assessment uses two different scoring thresholds
 
@@ -155,7 +186,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** wrong number
 - **Original wording:** "range: [12, 24]", "range: [25, 36]", "range: [37, 42]", "range: [43, 48]" and "level: total <= max * 0.4 ? 'low' : total <= max * 0.7 ? 'medium' : 'high'"
 - **Why:** The overall scale calls 37 of 48 (77%) "strong" and 43 of 48 (90%) "excellent", while a category is called "high" from 71% of its maximum. A team can therefore score "excellent" overall while every category reads only "high", and the two bands disagree on the same percentages.
-- **Planned resolution:** `public/src/views/AssessmentView.vue` — `categoryScores` and `overallLevel`: derive both from one shared threshold set, and state it in `public/src/data/assessment.js` — `overallAssessment`.
+- **Resolution made:** `public/src/data/assessment.js` — `overallAssessment.scoring` now carries one threshold set plus a separate band statement: `categoryThresholds` reads "BEAT's own scoring rule, not a research finding: a category is low below 40 percent of that category's own maximum, medium from 40 to 70 percent of it, and high above 70 percent. The four overall bands are a separate BEAT choice, stated as absolute score ranges out of 48, and are not produced by those two percentage cuts: low 12 to 24, medium 25 to 36, strong 37 to 42, high 43 to 48.", with the new `bandCuts` (12–24 "Significant Opportunity for Improvement", 25–36 "Building Better Practices", 37–42 "Strong Foundation", 43–48 "BEAT-Ready Team") and `derivation` fields; `public/src/views/AssessmentView.vue` computes the category level from one rule (`levelFor`, 0.4 and 0.7 of the category maximum) and reads the bands from `overallAssessment.scoring.bandCuts` (`bandFor`); `README.md` — "The Self-Assessment" (anchor `assessment-scoring`) states the same rule and the validity note.
+- **Deviation from plan:** `README.md` — "The Self-Assessment" (line 698) still says "The same two cuts give the four overall bands", which is the false arithmetic this entry was raised about; the data side now says the bands are "a separate BEAT choice … not produced by those two percentage cuts". The README wording is outside this card's file, so the difference is recorded here rather than fixed.
+- **Disposition:** reworded — the two disagreeing threshold sets are replaced by one category rule plus an explicitly separate band list.
 
 ---
 
@@ -167,7 +200,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** self-contradiction
 - **Original wording:** "We maintain sacred blocks of four hours daily where no meetings, messages, or interruptions are permitted." and "**Protecting focus** — We will not interrupt sacred time. We will wait." against "**During incidents:**" and "Sacred blocks are suspended"
 - **Why:** The principle and the commitment are absolute ("above all else", "no interruptions are permitted"); the incident carve-out is not scoped — it names no role that may suspend a block, no time box, no rotation, and it can be invoked by anyone who judges something an incident.
-- **Planned resolution:** `README.md` — Principle 1 and "The BEAT Commitment": qualify with an explicit exception clause naming who may suspend a block, and when; mirrored in `public/src/data/manifesto.js` — `principles.focus[0].description` and `incidentProtocol`, rendered by `public/src/views/PracticesView.vue` — "Incidents & Emergencies".
+- **Resolution made:** `README.md` — Principle 1 now scopes the exception: "The only exception is a declared production incident: the incident lead may suspend a block, and only for the time the incident runs." and "Incidents & Emergencies" repeats it under "**During incidents:** The incident lead may suspend a sacred block, and only for the time the incident runs"; mirrored in `public/src/data/manifesto.js` — `principles.focus[0].description` and `incidentProtocol`, rendered by `public/src/views/PracticesView.vue` — "Incident protocol".
+- **Resolved position:** the block is absolute except for a declared production incident, and only the incident lead may suspend it, for the duration of the incident.
+- **Disposition:** reworded — "The only exception is a declared production incident: the incident lead may suspend a block, and only for the time the incident runs."
 
 ### WP-20 — "Pull, don't push" against "The Enabler sets the stack"
 
@@ -175,7 +210,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** self-contradiction
 - **Original wording:** "Work is not assigned. Work is pulled by those with capacity and interest." and "The Enabler sets the stack. Makers may adjust with reason."
 - **Why:** The Enabler ordering the stack is assignment-adjacent; who may set the stack, on what basis, and how a maker disputes the order are all undefined.
-- **Planned resolution:** `README.md` — Principle 8 and "Prioritization": state the Enabler's role as ordering rather than assigning, and give the dispute path; mirrored in `public/src/data/manifesto.js` — `principles.autonomy[1].description`, `priorityBuckets`, `roles[1].description`.
+- **Resolution made:** `README.md` — Principle 8 now states "The Enabler orders the stack — priority and order, never assignment — and makers pull from the top of it. A maker may skip an item with a reason, propose an alternative, and object to the order through the dispute path in the priority rules."; mirrored in `public/src/data/manifesto.js` — `principles.autonomy[1].description` and `roles[1].description` ("they set order and capacity, never assignment").
+- **Resolved position:** the Enabler orders the stack by priority and order and never assigns; the maker pulls, may skip with a reason, and objects through the dispute path.
+- **Disposition:** reworded — "The Enabler orders the stack — priority and order, never assignment — and makers pull from the top of it."
 
 ### WP-21 — Maker autonomy over how, against a team-owned definition of done
 
@@ -183,7 +220,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** self-contradiction
 - **Original wording:** "Those who build the thing decide how to build it. They choose their tools, their approach, their schedule, their collaborators." against "**The team owns this definition.** Adjust it as needed. But once agreed, honor it." with "Code reviewed by at least one other maker"
 - **Why:** A maker's freedom is stated as absolute over method, while the done criteria — including a review the maker cannot satisfy alone — are owned by the team, and no path exists for a maker who disagrees with the done condition.
-- **Planned resolution:** `README.md` — Principle 7 and "Definition of Done": separate method autonomy from the done condition and add the disagreement path; mirrored in `public/src/data/manifesto.js` — `principles.autonomy[0].description`, `definitionOfDone.code`, `public/src/views/PracticesView.vue` — "Definition of Done".
+- **Resolution made:** `README.md` — Principle 7 now separates the two: "Method is the maker's. The done condition is the team's, and a maker who cannot meet one raises it before the work starts, not after.", and "Definition of Done" adds "If a maker cannot meet a condition, they raise it before the work starts; the team either changes the condition or the work does not start."; mirrored in `public/src/data/manifesto.js` — `principles.autonomy[0].description` and `definitionOfDone.code`.
+- **Resolved position:** method belongs to the maker, the done condition to the team, and disagreement is raised before the work starts, where the team either changes the condition or the work does not start.
+- **Disposition:** reworded — "Method is the maker's. The done condition is the team's, and a maker who cannot meet one raises it before the work starts, not after."
 
 ### WP-22 — The weekly meeting budget against the incident update cadence
 
@@ -191,7 +230,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** self-contradiction
 - **Original wording:** "We limit them to two hours per week, one hour maximum each." against "3. **Communicate** — Brief status updates every 30 minutes until resolved."
 - **Why:** A sustained incident produces 30-minute updates for as long as it runs, which exceeds the weekly meeting budget and the one-hour maximum; the exception is not time-boxed and no owner is named for it.
-- **Planned resolution:** `README.md` — Principle 5 and "Incidents & Emergencies": state the incident exception explicitly, including its time box; mirrored in `public/src/data/manifesto.js` — `principles.communication[1].description`, `incidentProtocol[2]`.
+- **Resolution made:** `README.md` — Principle 5 now names the exception, "a declared incident is the only exception", and "Incidents & Emergencies" states it with an owner and a time box: "The meeting budget does not apply during an incident; the incident lead decides when normal rules resume." plus "Status updates every half hour until the incident is stable." and "Async post-mortem within two days."; mirrored in `public/src/data/manifesto.js` — `principles.communication[1].description` and `incidentProtocol`.
+- **Deviation from plan:** the incident protocol is now a step list (`incidentProtocol.steps`), not the single `incidentProtocol[2]` the plan named.
+- **Resolved position:** the weekly meeting budget applies except during a declared incident, where the incident lead runs the updates and decides when normal rules resume.
+- **Disposition:** reworded — "The meeting budget does not apply during an incident; the incident lead decides when normal rules resume."
 
 ### WP-23 — "We do not assign buddies" against the onboarding buddy
 
@@ -199,7 +241,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** self-contradiction
 - **Original wording:** "We do not schedule pairing. We do not mandate walkthroughs. We do not assign buddies." against "New member has a \"buddy\" for questions (informal, not mandatory pairing)"
 - **Why:** The prose prohibition and the onboarding promise are in direct conflict; the parenthetical "not mandatory pairing" does not resolve it, because the issue is whether a buddy is assigned at all.
-- **Planned resolution:** `README.md` — "Collaboration" and "Onboarding to BEAT" → "Connector's Responsibility": reconcile the two statements; mirrored in `public/src/data/manifesto.js` — `onboarding`, rendered by `public/src/views/OnboardingView.vue` — "Connector's Responsibility", and the identical sentence in `public/src/views/PracticesView.vue` — "Collaboration".
+- **Resolution made:** `README.md` — "Collaboration" now reads "We do not schedule pairing. We do not mandate walkthroughs. Collaboration is initiated by those who need it. Where a team adds a mentor for a new member, that is the onboarding ramp, not a standing pairing: the mentor's time is planned capacity like any other work.", and "Onboarding to BEAT" → "What We Don't Do" keeps "Assign a mandatory buddy for months" as a negative; mirrored in `public/src/data/manifesto.js` — `onboarding` (`juniorTeams`) and `public/src/views/OnboardingView.vue`.
+- **Deviation from plan:** the planned view section `public/src/views/OnboardingView.vue` — "Connector's Responsibility" was not created; the reconciliation landed in `README.md` — "Collaboration", "What We Don't Do" and "On Junior-Heavy Teams", in `manifesto.js` — `onboarding`, and in `OnboardingView.vue`. `README.md` — "Connector's Responsibility" still exists; the site data has no counterpart key for it.
+- **Resolved position:** BEAT assigns no buddy; a team that adds a mentor for a new member does so as part of the onboarding ramp, and the mentor's time is planned capacity.
+- **Disposition:** reworded — "Where a team adds a mentor for a new member, that is the onboarding ramp, not a standing pairing: the mentor's time is planned capacity like any other work."
 
 ### WP-24 — "Everything else waits" against auto-proceed on reviews
 
@@ -207,7 +252,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** self-contradiction
 - **Original wording:** "Urgent means phone call. Everything else waits." and "**Reviews:** Anyone can review. Four-hour response SLA. Auto-proceed after 24 hours if CI passes." against "Code reviewed by at least one other maker"
 - **Why:** Auto-proceed after 24 hours merges code that has not been reviewed, which the definition of done forbids and the anti-pattern table lists as the fix for review blocking ("Anyone can review, auto-proceed rule"). The rule also states no exception for security-sensitive changes.
-- **Planned resolution:** `README.md` — "Avoiding Chokepoints" → "Reviews" and "Definition of Done": state which reviews auto-proceed applies to and how that reconciles with the done criteria; mirrored in `public/src/data/manifesto.js` — `definitionOfDone.code[2]`, `constraints`, `public/src/views/AssessmentView.vue` — no review-turnaround question exists.
+- **Resolution made:** `README.md` — "Avoiding Chokepoints" → "Reviews" now names the merge owner and the exceptions: "Auto-proceed after 24 working hours if the build passes: the author merges, or asks the Enabler to merge, once the window closes. A change with security, data-migration or billing impact, and a change to a dependency other teams consume, waits for a named reviewer and never auto-proceeds. Open review comments also stop auto-proceed: the author answers them or asks for a named reviewer.", and "Definition of Done" now reads "Code reviewed by at least one other maker, or auto-proceeded under the review rule with the exceptions in that rule named in the merge"; mirrored in `public/src/data/manifesto.js` — `definitionOfDone.code` and `decisionRules` — "Auto-proceed" and "Review response".
+- **Resolved position:** auto-proceed is the exception, not the default: the build must pass, the window must close, the author or the Enabler merges, and security, data-migration, billing and cross-team dependency changes plus unanswered review comments never auto-proceed.
+- **Disposition:** reworded — "Code reviewed by at least one other maker, or auto-proceeded under the review rule with the exceptions in that rule named in the merge".
 
 ### WP-25 — "Decisions not documented did not happen" against silence-as-consent
 
@@ -215,7 +262,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** self-contradiction
 - **Original wording:** "Decisions not documented did not happen." against "**Decisions:** Post recommendation. Wait 24 hours. No objection means proceed." and "Makers may refuse work that is unethical, impossible, or poorly conceived."
 - **Why:** Silence-as-consent is a decision without documentation, and a maker's silence is treated as agreement while their explicit refusal is treated as ownership — the same silence carries opposite meanings depending on who is silent.
-- **Planned resolution:** `README.md` — Principle 4, Principle 9 and "Avoiding Chokepoints" → "Decisions": require a documented decision record and distinguish "no objection" from consent; mirrored in `public/src/data/manifesto.js` — `principles.communication[0].description`, `principles.autonomy[2].description`.
+- **Resolution made:** `README.md` — Principle 4 now requires the record: "We write by default. A decision counts only when it is written down and the record names who decided it — silence is not consent.", Principle 9 keeps refusal as ownership, "A refusal is a decision and is recorded like any other: this is not insubordination—it is ownership.", and "Avoiding Chokepoints" → "Decisions" now separates no objection from consent: "Post a recommendation naming the owner. Wait one working day. No objection means the decision is recorded and stands; silence is not consent on its own, so the record says who decided."; mirrored in `public/src/data/manifesto.js` — `principles.communication[0].description`, `principles.autonomy[2].description` and `decisionRules` — "Decisions" ("Nobody objects within 24 working hours — a BEAT default, not a research finding — and the decision is recorded.").
+- **Resolved position:** a decision counts when it is written and names who decided it; silence is not consent, and a refusal is a recorded decision like any other.
+- **Disposition:** reworded — "We write by default. A decision counts only when it is written down and the record names who decided it — silence is not consent."
 
 ### WP-26 — "No known defects introduced" against shipping logged defects
 
@@ -223,7 +272,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** self-contradiction
 - **Original wording:** "**More than five minutes, not blocking?** Log it, continue. Protect your focus." and "No known defects introduced" and "\"Done\" means done—not \"done but...\" or \"done except...\""
 - **Why:** A logged defect found during the work ships inside the merged item, which the done criteria forbid, and the text nowhere distinguishes "not done" from "done with a logged defect".
-- **Planned resolution:** `README.md` — "Spotted Issues" and "Definition of Done": say explicitly whether a logged defect blocks done, and where it is tracked; mirrored in `public/src/data/manifesto.js` — `definitionOfDone.code[5]`, rendered by `public/src/views/PracticesView.vue` and `public/src/views/ReferenceView.vue` — "Spotted Issue Decision".
+- **Resolution made:** `README.md` — "Spotted Issues" now says "A spotted issue that is logged as its own item does not block the work that found it, provided it is recorded before the merge.", and "Definition of Done" carries the matching criterion "No known defects introduced: a defect found during the work and logged as its own item does not block this one, provided it is recorded before the merge"; mirrored in `public/src/data/manifesto.js` — `definitionOfDone.code`.
+- **Deviation from plan:** the planned view sections `public/src/views/PracticesView.vue` and `public/src/views/ReferenceView.vue` — "Spotted Issue Decision" do not exist at the branch head; the rule is carried by `README.md` — "Spotted Issues" and "Definition of Done", and by `manifesto.js` — `definitionOfDone.code`.
+- **Resolved position:** a defect found during the work and logged as its own item does not block the item, provided it is recorded before the merge.
+- **Disposition:** reworded — "A spotted issue that is logged as its own item does not block the work that found it, provided it is recorded before the merge."
 
 ### WP-27 — Exploration work has no place on the board
 
@@ -231,7 +283,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** self-contradiction
 - **Original wording:** "No justification required. No approval needed." against "ICE → LATER → NEXT → IN PROGRESS → DONE" and "Work-in-progress limit: three per maker."
 - **Why:** Exploration is a standing claim on a maker's time, but the board has no lane for it and the WIP limit does not say whether exploration counts against the three items — so a maker can either exceed the limit or abandon the exploration entitlement.
-- **Planned resolution:** `README.md` — Principle 12 and "The Board": state how exploration time sits against the WIP limit and whether it has a board lane; mirrored in `public/src/data/manifesto.js` — `principles.sustainability[2].description`, `constraints`, `public/src/views/FrameworkView.vue` — "The Board".
+- **Resolution made:** `README.md` — Principle 12 now answers the board question: "Exploration does not consume a work-in-progress slot and does not sit on the board: it is scheduled, not tracked as work.", and "Burnout Prevention" adds "**Protect exploration time.** A fifth of each maker's working time, moved to the next beat and recorded when the team is busy."; mirrored in `public/src/data/manifesto.js` — `principles.sustainability[2].description` and `decisionRules` — "Exploration time".
+- **Deviation from plan:** the planned view mirror `public/src/views/FrameworkView.vue` — "The Board" was not given a separate exploration rule; the rule is carried in `README.md` — Principle 12 and "Burnout Prevention", and in `manifesto.js`.
+- **Resolved position:** exploration is scheduled time, not board work: it consumes no work-in-progress slot and is moved to the next beat and recorded when the team is busy.
+- **Disposition:** reworded — "Exploration does not consume a work-in-progress slot and does not sit on the board: it is scheduled, not tracked as work."
 
 ### WP-28 — "We plan at 80%" against an uncapped NOW bucket
 
@@ -239,7 +294,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** self-contradiction
 - **Original wording:** "We plan at 80% and leave slack for life." against "**NOW** — Critical, blocking, time-sensitive. Maximum five items."
 - **Why:** The bucket system has no capacity check; five critical items can exceed 80% of capacity, and the tie-break between "cut scope" and "take the work" is not stated, so capacity and priority are in unresolved conflict rather than a resolved one.
-- **Planned resolution:** `README.md` — Principle 10 and "Prioritization": state which wins when the NOW bucket exceeds planned capacity; mirrored in `public/src/data/manifesto.js` — `principles.sustainability[0].description`, `priorityBuckets`.
+- **Resolution made:** `README.md` — Principle 10 now names the tie-break: "The capacity plan belongs to the Enabler, is set per maker for each beat at eighty percent of that maker's available working time, and says what does not fit. When a NOW item would break the plan, the deadline moves before the rest does.", and "Prioritization" states it for the bucket: "Maximum five items — a BEAT default, listed in the constraints table. When the bucket needs more than the capacity plan allows, the plan wins: the deadline moves or the scope shrinks."; mirrored in `public/src/data/manifesto.js` — `principles.sustainability[0].description`, `priorityBuckets[0].description` and `decisionRules` — "NOW bucket limit" and "Planning capacity".
+- **Resolved position:** the capacity plan wins over the NOW bucket; a NOW item that breaks the plan has its deadline moved, or its scope cut.
+- **Disposition:** reworded — "When the bucket needs more than the capacity plan allows, the plan wins: the deadline moves or the scope shrinks."
 
 ### WP-29 — Onboarding promise against "Where BEAT Fits"
 
@@ -247,7 +304,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** self-contradiction
 - **Original wording:** "- Expect full productivity in week one" against "- Junior-heavy teams needing close guidance"
 - **Why:** The manifesto claims BEAT fits junior-heavy teams poorly while its onboarding section promises a gradual ramp that is the only support a junior would get; neither section says which of the two wins for a junior team.
-- **Planned resolution:** `README.md` — "Where BEAT Fits" and "Onboarding to BEAT": state the exception and what a junior-heavy team must add; mirrored in `public/src/data/manifesto.js` — `whereItFits.fitsPoorly`, `onboarding`.
+- **Resolution made:** `README.md` — "Where BEAT Fits" now states the exception in the poor-fit list, "Junior-heavy teams needing close guidance, unless the team adds a mentor alongside the BEAT ramp", and "Onboarding to BEAT" gained "On Junior-Heavy Teams"; mirrored in `public/src/data/manifesto.js` — `whereItFits.fitsPoorly` and `onboarding.juniorTeams`, rendered by `public/src/views/AntiPatternsView.vue` and `public/src/views/OnboardingView.vue`.
+- **Resolved position:** BEAT fits a junior-heavy team poorly unless the team adds a mentor alongside the ramp; that is what the team must add.
+- **Disposition:** reworded — "Junior-heavy teams needing close guidance, unless the team adds a mentor alongside the BEAT ramp".
 
 ---
 
@@ -259,7 +318,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "Urgent means phone call. Everything else waits." and "**Alert** — Post immediately in dedicated incident channel. Phone/page if needed."
 - **Why:** No phone or paging channel is named, nobody is authorised to declare something urgent, there is no fallback when no one answers, and no rule for a maker in another time zone.
-- **Planned resolution:** `README.md` — Principle 6 and "Incidents & Emergencies": name the escalation channel, who may declare urgency, and the fallback; mirrored in `public/src/data/manifesto.js` — `principles.communication[2].description` and `incidentProtocol[0]`, `public/src/data/assessment.js` — `assessmentQuestions[5].options[3].description`.
+- **Resolution made:** `README.md` — Principle 6 now names the channel and the fallback: "Urgent means a phone call to the on-call rota, and the rota names the fallback when nobody answers.", and "Incidents & Emergencies" names the owner and the clock: step 1 "The on-call rota names who to call and the fallback when nobody answers.", step 2 "Someone claims ownership within fifteen minutes … and becomes the incident lead for the rest of the incident."; mirrored in `public/src/data/manifesto.js` — `principles.communication[2].description` and `incidentProtocol`, and in `public/src/data/assessment.js` — `assessmentQuestions[5].options[3].description` ("Urgent = phone, else async").
+- **Resolved position:** urgent is a phone call to the on-call rota, the rota names the fallback, and whoever claims ownership within fifteen minutes becomes the incident lead.
+- **Disposition:** reworded — "Urgent means a phone call to the on-call rota, and the rota names the fallback when nobody answers."
 
 ### WP-31 — "24 working hours" is undefined
 
@@ -267,7 +328,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "We expect responses within 24 working hours."
 - **Why:** "Working hours" is not defined per time zone or per working day, nobody owns the expectation, and no behaviour is stated for leave or absence. A maker in a far time zone cannot know when the clock starts.
-- **Planned resolution:** `README.md` — Principle 6: define working hours and the reference time zone, and name who owns the expectation; mirrored in `public/src/data/manifesto.js` — `principles.communication[2].description`, `public/src/data/assessment.js` — `beatRecommendations.communication.low.recommendations[1]`.
+- **Resolution made:** `README.md` — new "Working across Time Zones" (anchor `timeZones`) defines the clock: "Every rule in BEAT that counts time assumes one working day. Here is the one this team uses." with coverage hours, reference time zone and overlap hours; mirrored in `public/src/data/manifesto.js` — `timeZones` and `principles.communication[2].description` ("We expect a response within 24 working hours — the BEAT default, listed in the constraints table — counted against the coverage hours in the time-zone rules."), and in `public/src/data/assessment.js` — `assessmentQuestions[4].options[2].description` ("24 working hours — a BEAT default, listed in the constraints table").
+- **Deviation from plan:** `README.md` — Principle 6 still says "We expect a response within one working day, counted against the coverage hours in the time-zone rules" (and "one working day" also appears in "Prioritization" and "Working across Time Zones"), while the data says "24 working hours". Both wordings are recorded here; the README text is outside this card's file.
+- **Resolved position:** every time-based rule counts one working day defined by the team's coverage hours and reference time zone, and the expectation is 24 working hours — a BEAT default, not a research finding.
+- **Disposition:** reworded — "We expect a response within 24 working hours — a BEAT default, listed in the constraints table — counted against the coverage hours in the time-zone rules."
 
 ### WP-32 — The stale-item sweep has no trigger, owner, or exception
 
@@ -275,7 +339,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "Items stale for five days return to backlog."
 - **Why:** Staleness has no definition (no last-activity field on the board), no one performs the sweep, and there is no way to pin an item that is intentionally parked.
-- **Planned resolution:** `README.md` — "The Board": define staleness, name the owner of the sweep, and allow a pin; mirrored in `public/src/views/FrameworkView.vue` — "Stale Items" ("Return to backlog after 5 days"), and added to `public/src/data/manifesto.js` — `constraints` (see WP-52).
+- **Resolution made:** `README.md` — "The Board" now defines staleness, the owner and the exception: "Items with no activity for five working days return to the backlog, unless the maker pins them as intentionally parked; the pin is reviewed at the next beat close, and an unpinned item returns to the backlog. The Enabler sweeps the board at each beat close."; mirrored in `public/src/data/manifesto.js` — `decisionRules` — "Stale-item sweep".
+- **Deviation from plan:** the sweep landed in `decisionRules` — "Stale-item sweep", not in `constraints` as planned, and the planned `public/src/views/FrameworkView.vue` — "Stale Items" section does not exist at the branch head.
+- **Resolved position:** an item with no activity for five working days returns to the backlog unless the maker pins it as intentionally parked; the pin is reviewed at the next beat close, and the Enabler sweeps the board at each beat close.
+- **Disposition:** reworded — "Items with no activity for five working days return to the backlog, unless the maker pins them as intentionally parked."
 
 ### WP-33 — Auto-proceed has no owner or exceptions
 
@@ -283,7 +350,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "**Reviews:** Anyone can review. Four-hour response SLA. Auto-proceed after 24 hours if CI passes."
 - **Why:** No one is named to perform the merge, the rule says nothing about a review that raised substantive comments but was not answered, and no security-sensitive or data-migration exception is carved out.
-- **Planned resolution:** `README.md` — "Avoiding Chokepoints" → "Reviews": name the merge owner, state what happens when comments exist, and carve out exceptions; mirrored in `public/src/data/manifesto.js` — `constraints` ("Auto-proceed | 24 hours"), `public/src/views/FrameworkView.vue` — "The Numbers", `public/src/views/ReferenceView.vue` — "The Numbers".
+- **Resolution made:** `README.md` — "Avoiding Chokepoints" → "Reviews" now names the merge owner, the response window and the exceptions: "Four working-hour response window, counted inside the coverage hours of the reference time zone. Auto-proceed after 24 working hours if the build passes: the author merges, or asks the Enabler to merge, once the window closes. A change with security, data-migration or billing impact, and a change to a dependency other teams consume, waits for a named reviewer and never auto-proceeds. Open review comments also stop auto-proceed: the author answers them or asks for a named reviewer."; mirrored in `public/src/data/manifesto.js` — `decisionRules` — "Review response" and "Auto-proceed", and `constraints` ("Review response | 4 working hours", "Auto-proceed | 24 working hours").
+- **Deviation from plan:** the planned view sections `public/src/views/FrameworkView.vue` — "The Numbers" and `public/src/views/ReferenceView.vue` — "The Numbers" do not exist at the branch head; the rule lives in `README.md` — "Avoiding Chokepoints" → "Reviews", and in `manifesto.js` — `decisionRules`.
+- **Resolved position:** the author or the Enabler merges after 24 working hours once the window closes and the build passes, except for security, data-migration, billing and cross-team dependency changes and for open review comments.
+- **Disposition:** reworded — "Auto-proceed after 24 working hours if the build passes: the author merges, or asks the Enabler to merge, once the window closes."
 
 ### WP-34 — The WIP limit says what the limit is, not what to do at the limit
 
@@ -291,7 +361,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "Work-in-progress limit: three per maker."
 - **Why:** No owner, no stated consequence of reaching three, and no rule for a maker who is at the limit while the only remaining work is blocked.
-- **Planned resolution:** `README.md` — "The Board": state the owner, the consequence and the blocked-work exception; mirrored in `public/src/data/manifesto.js` — `constraints` ("WIP per maker | 3 items"), `public/src/views/FrameworkView.vue` — "WIP Limit" ("3 items per maker").
+- **Resolution made:** `README.md` — "The Board" now states the owner, the consequence and the blocked-work case: "Work-in-progress limit: three per maker. The maker stops taking new work at the limit. If the maker is blocked and every remaining item is blocked too, they say so in the check-in and the Enabler unblocks or reorders."; mirrored in `public/src/data/manifesto.js` — `decisionRules` — "Work-in-progress limit" and `constraints` ("WIP per maker | 3 items").
+- **Deviation from plan:** the rule landed in `decisionRules` — "Work-in-progress limit"; the planned `public/src/views/FrameworkView.vue` — "WIP Limit" section does not exist at the branch head.
+- **Resolved position:** at three items the maker stops taking new work; if the maker and every remaining item are blocked, the maker says so in the check-in and the Enabler unblocks or reorders.
+- **Disposition:** reworded — "The maker stops taking new work at the limit."
 
 ### WP-35 — "We do not groom" has no scope and no exception
 
@@ -299,7 +372,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "We size with **S/M/L**, not story points. We do not groom. We do not point. We do not track velocity."
 - **Why:** Three prohibitions with no scope (team-internal planning only, or every reporting obligation?) and no exception path for a team that must report to an external programme or a regulated customer.
-- **Planned resolution:** `README.md` — "Work Items": state the scope and the exception; mirrored in `public/src/views/FrameworkView.vue` — "Work Items" (identical sentence), and added to `public/src/data/manifesto.js` — `constraints` (see WP-52).
+- **Resolution made:** `README.md` — "Work Items" now states the scope and the exception: "Sizing applies to team-internal planning. A team that must report to an external programme, a regulator or a regulated customer keeps that reporting obligation and adapts the method around it."; mirrored in `public/src/data/manifesto.js` — `decisionRules` — "Sizing".
+- **Deviation from plan:** the rule landed in `decisionRules` — "Sizing", not in `constraints`, and the planned `public/src/views/FrameworkView.vue` — "Work Items" section does not exist at the branch head.
+- **Resolved position:** sizing applies to team-internal planning; an external reporting obligation is kept and the method is adapted around it.
+- **Disposition:** reworded — "Sizing applies to team-internal planning. A team that must report to an external programme, a regulator or a regulated customer keeps that reporting obligation and adapts the method around it."
 
 ### WP-36 — "Claim files" has no mechanism
 
@@ -307,7 +383,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "**Merges:** Merge main daily. Claim files. Keep branches short-lived."
 - **Why:** "Claim files" names no mechanism (a lock, a branch-protection rule, a board column), no conflict rule, and no owner; "daily" cannot be enforced without a definition of the working day across time zones.
-- **Planned resolution:** `README.md` — "Avoiding Chokepoints" → "Merges": name the claiming mechanism and the conflict rule; mirrored in `public/src/data/manifesto.js` — `technicalPractices[5]` ("Trunk-Based Development" covers merging only).
+- **Resolution made:** `README.md` — "Avoiding Chokepoints" → "Merges" now names the mechanism and the conflict rule: "Claim files in the branch protection rule before you start; when two makers claim the same file, the earlier claim stands and the later one re-plans around it. … A day is a working day in the reference time zone."; mirrored in `public/src/data/manifesto.js` — `decisionRules` — "Claiming files", and in `technicalPractices` — "Trunk-Based Development", which carries the claim-files rule.
+- **Resolved position:** files are claimed in the branch protection rule before work starts; the earlier claim stands and the later maker re-plans around it, and a day is a working day in the reference time zone.
+- **Disposition:** reworded — "Claim files in the branch protection rule before you start; when two makers claim the same file, the earlier claim stands and the later one re-plans around it."
 
 ### WP-37 — "We plan at 80%" names neither a planner nor a unit
 
@@ -315,7 +393,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "We plan at 80% and leave slack for life." and "**Plan at 80%.** Leave room for spotted issues, complexity, life."
 - **Why:** No one is named as planning, 80% is not defined as a percentage of what (per maker, per team, per beat), and there is no instruction for what to plan first when demand exceeds capacity.
-- **Planned resolution:** `README.md` — Principle 10 and "Burnout Prevention": name the planner, the unit and the capacity base; mirrored in `public/src/data/manifesto.js` — `principles.sustainability[0].description`, `constraints` ("Planning capacity | 80%").
+- **Resolution made:** `README.md` — Principle 10 now names the planner, the unit and the base: "The capacity plan belongs to the Enabler, is set per maker for each beat at eighty percent of that maker's available working time, and says what does not fit.", and "Burnout Prevention" repeats it: "**Plan at 80%.** The Enabler sets the capacity plan per maker for each beat, at eighty percent of that maker's available working time, and the plan says what does not fit."; mirrored in `public/src/data/manifesto.js` — `principles.sustainability[0].description`, `constraints` ("Planning capacity | 80% of available working time") and `decisionRules` — "Planning capacity".
+- **Resolved position:** the Enabler plans, per maker, per beat, at eighty percent of that maker's available working time, and the plan states what does not fit.
+- **Disposition:** reworded — "The capacity plan belongs to the Enabler, is set per maker for each beat at eighty percent of that maker's available working time, and says what does not fit."
 
 ### WP-38 — The four-hour review SLA has no coverage hours
 
@@ -323,7 +403,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "Four-hour response SLA."
 - **Why:** Four hours of whose day is not stated, no owner of the SLA, and the assessment instrument does not ask about review turnaround at all, so the rule is never exercised.
-- **Planned resolution:** `README.md` — "Avoiding Chokepoints" → "Reviews": define the measurement window and the owner; mirrored in `public/src/data/manifesto.js` — `constraints` ("Review response | 4 hours").
+- **Resolution made:** `README.md` — "Avoiding Chokepoints" → "Reviews" now defines the window: "Four working-hour response window, counted inside the coverage hours of the reference time zone.", and "Working across Time Zones" defines those coverage hours and the reference time zone; mirrored in `public/src/data/manifesto.js` — `constraints` ("Review response | 4 working hours"), `decisionRules` — "Review response" and `timeZones`.
+- **Resolved position:** the four-hour window is counted inside the coverage hours of the team's reference time zone, as defined in "Working across Time Zones".
+- **Disposition:** reworded — "Four working-hour response window, counted inside the coverage hours of the reference time zone."
 
 ### WP-39 — "Meet team members 1:1 (async or sync, their preference)"
 
@@ -331,7 +413,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "Meet team members 1:1 (async or sync, their preference)"
 - **Why:** An asynchronous 1:1 is not defined, no cadence, owner or tooling is given, and it sits against the earlier finding that the onboarding section assigns a buddy but the collaboration section forbids it.
-- **Planned resolution:** `README.md` — "Onboarding to BEAT" → "Week One: Observe": define the cadence and owner, or fold it into the buddy mechanism; mirrored in `public/src/data/manifesto.js` — `onboarding.weekOne.items[4]`.
+- **Resolution made:** `README.md` — "Onboarding to BEAT" → "Week One" now names the arranger and what counts: "Meet team members one to one: the Connector or the Enabler arranges it, you choose the format and the time, and a written exchange counts as a meeting"; mirrored in `public/src/data/manifesto.js` — `onboarding.weekOne.items[4], which carries the same sentence.
+- **Deviation from plan:** no recurring cadence was added; the repair names the arranger (the Connector or the Enabler), leaves the format and the time to the new member, and says that a written exchange counts as a meeting.
+- **Resolved position:** the Connector or the Enabler arranges the one-to-one, the new member chooses the format and the time, and a written exchange counts as a meeting.
+- **Disposition:** reworded — "Meet team members one to one: the Connector or the Enabler arranges it, you choose the format and the time, and a written exchange counts as a meeting".
 
 ### WP-40 — "We aim; we do not promise" has no path for promises already made
 
@@ -339,7 +424,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "Beats have **goals**, not commitments. We aim; we do not promise." against "| **Stealth deadlines** | Surprise \"we promised client by Friday\" | Surface commitments before making them |"
 - **Why:** The anti-pattern forbids hidden commitments, but a commitment already made to a customer — openly, by someone else — falls outside every rule; nothing says who renegotiates it or what the maker does with it.
-- **Planned resolution:** `README.md` — "Beats" and "Anti-Patterns" → "Organizational Anti-Patterns": state the rule for commitments that already exist; mirrored in `public/src/data/manifesto.js` — `antiPatterns.organizational[1]`, `public/src/views/FrameworkView.vue` — "Beats".
+- **Resolution made:** `README.md` — "Beats" now states the path for a commitment that already exists: "A commitment made outside the team is renegotiated by whoever made it, with the Enabler helping, and the team hears about it before the next beat starts.", and "Anti-Patterns" → "Organizational" now reads "Surface commitments before making them. A commitment already made outside the team is renegotiated by whoever made it"; mirrored in `public/src/data/manifesto.js` — `antiPatterns.organizational[1]`.
+- **Deviation from plan:** the view mirror is now `public/src/views/FrameworkView.vue` — "Beats and ceremonies", which renders the data rule; no separate "Beats" view section was added.
+- **Resolved position:** a commitment already made outside the team is renegotiated by whoever made it, the Enabler helps, and the team hears about it before the next beat starts.
+- **Disposition:** reworded — "A commitment made outside the team is renegotiated by whoever made it, with the Enabler helping, and the team hears about it before the next beat starts."
 
 ### WP-41 — "Disputes resolve async, then sync if stuck" has no timeout or fallback decider
 
@@ -347,7 +435,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "The Enabler sets the stack. Makers may adjust with reason. Disputes resolve async, then sync if stuck."
 - **Why:** "Stuck" has no time limit, no fallback decider is named for a dispute the Enabler cannot settle, and the Enabler is not excluded from being a party to the dispute.
-- **Planned resolution:** `README.md` — "Prioritization": state the escalation timeout, the fallback decider and the Enabler's recusal; mirrored in `public/src/data/manifesto.js` — `roles[1].description`, `priorityBuckets`.
+- **Resolution made:** `README.md` — "Prioritization" now gives the timeout, the fallback and the recusal: "If nobody answers within one working day, the dispute goes to a short synchronous discussion, and the Enabler decides unless they are a party to it, in which case the team decides."; mirrored in `public/src/data/manifesto.js` — `roles[1].description` ("When they are a party to a dispute, they step out of it."), `priorityBuckets` and `decisionRules` — "Decisions" ("Nobody objects within 24 working hours — a BEAT default, not a research finding — and the decision is recorded.").
+- **Deviation from plan:** the data states the wait as "24 working hours" while `README.md` says "one working day"; the same wording difference as WP-31. The README text is outside this card's file.
+- **Resolved position:** a dispute waits one working day for an answer, then goes to a short synchronous discussion; the Enabler decides unless they are a party to it, in which case the team decides.
+- **Disposition:** reworded — "If nobody answers within one working day, the dispute goes to a short synchronous discussion, and the Enabler decides unless they are a party to it, in which case the team decides."
 
 ### WP-42 — Two of the six done criteria are conditional, so "done" is not decidable
 
@@ -355,7 +446,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "Tests pass (existing and new where appropriate)" and "Deployable (or deployed, depending on team practice)" and "**The team owns this definition.** Adjust it as needed. But once agreed, honor it."
 - **Why:** Two of the six criteria are conditional on team practice, the list has no owner for the "where appropriate" judgement, and no rule says what a maker does when a done condition cannot be met — while the section insists "Done" means done.
-- **Planned resolution:** `README.md` — "Definition of Done": make each criterion decidable and name who decides the conditional parts; mirrored in `public/src/data/manifesto.js` — `definitionOfDone.code`, `public/src/views/PracticesView.vue` — "Definition of Done", `public/src/views/ReferenceView.vue` — "Definition of Done (Code)".
+- **Resolution made:** `README.md` — "Definition of Done" now makes each criterion decidable and names who decides the conditional parts: "Tests pass: the existing suite passes, and new behaviour carries a test unless the team has agreed an exception for it, which the Enabler records"; "Code reviewed by at least one other maker, or auto-proceeded under the review rule with the exceptions in that rule named in the merge"; "Deployable: the artefact builds and runs for the team's own use, and is deployed where the team deploys its own work"; "No known defects introduced: a defect found during the work and logged as its own item does not block this one, provided it is recorded before the merge"; "If a maker cannot meet a condition, they raise it before the work starts; the team either changes the condition or the work does not start."; mirrored in `public/src/data/manifesto.js` — `definitionOfDone.code` and `decisionRules` — "Done condition".
+- **Deviation from plan:** the view mirror `public/src/views/ReferenceView.vue` — "Definition of Done (Code)" exists as "Definition of done"; there is no separate code-only block in the view at the branch head.
+- **Resolved position:** each criterion states its exception and who records it, the Enabler records an agreed test exception, and a condition that cannot be met is raised before the work starts, where the team changes the condition or the work does not start.
+- **Disposition:** reworded — "If a maker cannot meet a condition, they raise it before the work starts; the team either changes the condition or the work does not start."
 
 ### WP-43 — The optional technical practices block has no applicability statement
 
@@ -363,7 +457,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** rule not applicable as written
 - **Original wording:** "These are not mandated. They are offered as practices that support focus, speed, and quality. Adopt what serves you. Discard what doesn't."
 - **Why:** The block names no scope (whole team, one service, one repository), no decision owner, and no rule for a practice that is only partly applicable — for example mandatory automated testing with a legacy codebase that has no test harness.
-- **Planned resolution:** `README.md` — "Technical Practices (Optional)": state the scope, the decision owner and the partial-adoption rule; mirrored in `public/src/data/manifesto.js` — `technicalPractices`, `public/src/views/PracticesView.vue` — "Technical Practices".
+- **Resolution made:** `README.md` — "Technical Practices (Optional)" now states the scope, the owner and the partial-adoption rule: "BEAT does not prescribe technical practices. These apply to one repository or service, adopted by the team that owns it. The team that owns the code decides. A practice that only partly applies … is adopted in the part that applies …"; mirrored in `public/src/data/manifesto.js` — `technicalPractices` and `practicePolicy` (scope, decidedBy, partialAdoption), rendered by `public/src/views/PracticesView.vue` — "Technical practices".
+- **Resolved position:** the practices apply to one repository or service, the team that owns the code decides, and a practice that only partly applies is adopted in the part that applies.
+- **Disposition:** reworded — "BEAT does not prescribe technical practices. These apply to one repository or service, adopted by the team that owns it. The team that owns the code decides."
 
 ---
 
@@ -375,7 +471,8 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** uncovered situation
 - **Original wording:** "**During incidents:**" and "Sacred blocks are suspended" and "Whoever is available helps—no \"not my job\"" and "**This is not normal work.** Incidents should be rare. If they're frequent, that's a systemic problem to solve—not a reason to abandon sustainable pace."
 - **Why:** Nothing defines who is on call, how the rotation is set, how it is handed over across time zones, whether on-call work is counted inside or outside a beat, how it is compensated, or how "available" is defined when Principle 6 says "Everything else waits" and Principle 10 makes overtime a red flag. "Whoever is available" is the only availability rule, and it depends on availability never being defined. A search of `public/src/data` and `public/src/views` finds no mention of on-call, a rotation, a handover or compensation.
-- **Planned resolution:** `README.md` — new subsection "On-call and incident rotation" in "The Framework", next to "Incidents & Emergencies": rotation, handover, compensation, availability definition, and whether on-call sits inside the beat; mirrored in `public/src/data/manifesto.js` — new `onCall` data key, and a new block in `public/src/views/PracticesView.vue`.
+- **Resolution made:** `README.md` — new "The Framework" → "On-call and Incident Rotation" (anchor `onCall`) covers Rotation, Handover, Availability, Who may declare an incident, Inside or outside the beat, Compensation and Escalation; mirrored in `public/src/data/manifesto.js` — new `onCall` key, rendered by `public/src/views/PracticesView.vue` in the situations block (`const situations = [onCall, timeZones, crossTeamDependencies, measurement, customerFeedback]`).
+- **Disposition:** added — the section "On-call and Incident Rotation" and the `onCall` data key, neither of which existed before.
 
 ### WP-45 — Time zones: named as a benefit, never as a condition
 
@@ -383,7 +480,8 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** uncovered situation
 - **Original wording:** "Written words can be searched, referenced, and shared across time zones."
 - **Why:** The manifesto calls itself remote-first and lists "Remote-first or distributed teams" as a best fit, yet never states coverage hours, what "24 working hours" means across zones, how the daily check-in works for a maker whose day has barely started, how one maker's sacred block lands on another maker's working day, how a 30-minute Beat Start is attended across zones, or how handover happens. Every time-dependent rule in the text — sacred blocks, 24 working hours, 4-hour review SLA, 24-hour auto-proceed, 5-day staleness, daily merges — assumes a single working day that does not exist for a distributed team.
-- **Planned resolution:** `README.md` — new subsection "Working across time zones" in "The Framework": coverage hours, the reference time zone for each SLA, overlap hours for ceremonies, and handover; mirrored in `public/src/data/manifesto.js` — new `timeZones` data key, and a new block in `public/src/views/PracticesView.vue`.
+- **Resolution made:** `README.md` — new "The Framework" → "Working across Time Zones" (anchor `timeZones`) states "Every rule in BEAT that counts time assumes one working day. Here is the one this team uses." with Coverage hours, Reference time zone, Overlap hours, Handover, Daily check-in, Sacred blocks and Urgent work across zones; mirrored in `public/src/data/manifesto.js` — new `timeZones` key, rendered by `public/src/views/PracticesView.vue` in the situations block.
+- **Disposition:** added — the section "Working across Time Zones" and the `timeZones` data key, neither of which existed before.
 
 ### WP-46 — Onboarding: a four-week ramp with no escalation path
 
@@ -391,7 +489,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** uncovered situation
 - **Original wording:** "### Week One: Observe", "- Expect full productivity in week one" and "New member has a \"buddy\" for questions (informal, not mandatory pairing)"
 - **Why:** The section lists what happens week by week but not what happens when the ramp fails: no named artefact set a new member must read (decision log, architecture notes, the board's own history), no treatment of a new member's first review against the four-hour review SLA and the 24-hour auto-proceed rule, no statement of what a new member may decline, and no reconciliation with the "Junior-heavy teams needing close guidance" entry in "BEAT fits poorly for:" — the only guidance a junior receives is this ramp. No time-zone note applies to week one either, since the 1:1s may be asynchronous.
-- **Planned resolution:** `README.md` — "Onboarding to BEAT": add the reading list, the escalation path when the ramp is not working, the rule for a new member's first review, and the junior-heavy-team exception; reconciled with `README.md` — "Where BEAT Fits"; mirrored in `public/src/data/manifesto.js` — `onboarding` and `whereItFits.fitsPoorly`, `public/src/views/OnboardingView.vue`.
+- **Resolution made:** `README.md` — "Onboarding to BEAT" gained four subsections: "Reading List", "Your First Review", "When the Ramp Is Not Working" (which states "You may decline work, meetings and on-call during the ramp") and "On Junior-Heavy Teams"; mirrored in `public/src/data/manifesto.js` — `onboarding` (`readingList`, `firstReview`, `escalationPath`, `juniorTeams`), rendered by `public/src/views/OnboardingView.vue`.
+- **Deviation from plan:** the planned `public/src/views/PracticesView.vue` — "Collaboration" mirror was not created; the escalation path, reading list, first review and junior-team rules live in `README.md` — "Onboarding to BEAT", in `manifesto.js` — `onboarding`, and in `OnboardingView.vue`.
+- **Disposition:** added — the four new "Onboarding to BEAT" subsections and the four new `onboarding` keys.
 
 ### WP-47 — Cross-team dependencies: everything stops at the team boundary
 
@@ -399,7 +499,8 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** uncovered situation
 - **Original wording:** "**Blockers:** Surface in check-in. Pull different work while waiting. Enabler escalates." and "**The Connector** maintains knowledge flow. They keep documentation current, ensure context flows between makers, and onboard new members." and "**Define interfaces first.** Agree on contracts. Work in parallel against them."
 - **Why:** All escalation, all connectors and all interface agreement are intra-team. Nothing covers a dependency owned by another team, a pull-based team with no inbound queue, a shared library or platform change that blocks several teams, or how a commitment made to another team is tracked. "Enabler escalates" names no target of the escalation.
-- **Planned resolution:** `README.md` — new subsection "Dependencies across teams" in "The Framework": who owns a dependency outside the team, how it is raised, how interfaces are agreed and versioned, and how commitments to other teams are tracked; mirrored in `public/src/data/manifesto.js` — new `crossTeamDependencies` data key, and a new block in `public/src/views/PracticesView.vue`.
+- **Resolution made:** `README.md` — new "The Framework" → "Dependencies across Teams" (anchor `crossTeamDependencies`) covers Naming the dependency, Raising it, Interfaces, Commitments to other teams, Shared foundations and When the other side does not answer; mirrored in `public/src/data/manifesto.js` — new `crossTeamDependencies` key, rendered by `public/src/views/PracticesView.vue` in the situations block.
+- **Disposition:** added — the section "Dependencies across Teams" and the `crossTeamDependencies` data key, neither of which existed before.
 
 ### WP-48 — Accountability and measurement: outcomes are promised but never defined
 
@@ -407,7 +508,9 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** uncovered situation
 - **Original wording:** "We do not measure hours worked or time online. We measure outcomes delivered." and "| **Metric theater** | Tracking velocity, points, hours | Stop. Measure outcomes, not activity. |" and "- Burnout despite 80% planning"
 - **Why:** No section states what is measured, by whom, over what window, or what happens where outcomes are not observable — support, infrastructure, research, maintenance. "Outcomes" is never defined. The anti-pattern forbids activity metrics without saying what replaces them. The warning sign "Burnout despite 80% planning" has no threshold that triggers the response it implies, and the response it names is "Discuss in Beat Close". The site's assessment instrument is a self-report with no statement of validity, so it cannot serve as the measurement mechanism either.
-- **Planned resolution:** `README.md` — new subsection "Accountability and measurement" in "The Framework", after "Burnout Prevention": what is measured, the owner, the cadence, the treatment of work without observable outcomes, and the threshold behind each warning sign in "When BEAT Isn't Working"; mirrored in `public/src/data/manifesto.js` — new `measurement` data key and a new block in `public/src/views/PracticesView.vue`, plus a validity note on the assessment in `public/src/data/assessment.js`.
+- **Resolution made:** `README.md` — new "The Framework" → "Accountability and Measurement" (anchor `measurement`) states "What is measured.", "Who measures.", "When.", "Window.", "**Warning signs and their thresholds.**" (overtime at the limit in two consecutive beats, WIP at the limit in two consecutive beats, the same blocker unresolved across two beats, a maker who has missed two check-ins in a row), "Not a scorecard.", "When an outcome is not observable." and "**The assessment on this site.**"; mirrored in `public/src/data/manifesto.js` — new `measurement` key, rendered by `public/src/views/PracticesView.vue` in the situations block, plus the validity note in `public/src/data/assessment.js` — `overallAssessment.validity.note` ("This is a self-report with no published validity evidence.").
+- **Deviation from plan:** the four warning-sign thresholds sit in "Accountability and Measurement" → "Warning signs and their thresholds"; the "Anti-Patterns" → "When BEAT Isn't Working" list now carries the same four thresholds.
+- **Disposition:** added — the section "Accountability and Measurement", the `measurement` data key and the assessment validity note.
 
 ---
 
@@ -419,7 +522,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** self-contradiction
 - **Original wording:** "**Improving always** — We will reflect each beat. We will adjust. We will find better ways." against a `commitments` array with four entries: "Protecting focus", "Defaulting to async", "Trusting makers", "Sustaining pace"
 - **Why:** The site states a different commitment set from the README it claims to publish.
-- **Planned resolution:** `public/src/views/HomeView.vue` — `commitments`: add the fifth commitment so the site carries all five.
+- **Resolution made:** `public/src/views/HomeView.vue` — `commitments` now carries all five commitments (Protecting focus, Defaulting to async, Trusting makers, Sustaining pace, Improving always), matching `README.md` — "The BEAT Commitment" (which ends "**Improving always** — We will reflect each beat. We will adjust. We will find better ways.").
+- **Deviation from plan:** the fifth commitment was added in the view, as planned, but the list stayed local to `public/src/views/HomeView.vue`; no `commitments` key was added to `public/src/data`, so the README and the site still carry the list in two places.
+- **Resolved position:** the site now publishes the same five commitments as the README.
+- **Disposition:** reworded — the fifth commitment "Improving always" is now present in the site's list.
 
 ### WP-50 — "Customer & User Feedback" has no site counterpart at all
 
@@ -427,7 +533,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** self-contradiction
 - **Original wording:** "**Direct access.** Makers should have direct access to user feedback—support tickets, analytics, user interviews. Not filtered through three layers of management." and "**Regular exposure.** At least once per beat, someone on the team reviews real user feedback. Share highlights async."
 - **Why:** A search of `public/src/data` and `public/src/views` finds no section, data key or view carrying this content, so the site and the README do not carry the same set of sections.
-- **Planned resolution:** `public/src/data/manifesto.js` — new `customerFeedback` data key, and a matching section in the redesigned site; `README.md` — "Customer & User Feedback" stays as the source text.
+- **Resolution made:** `public/src/data/manifesto.js` — new `customerFeedback` key (id, title "Customer & User Feedback", summary "Work built away from users drifts away from what users need. We keep the line to users open.", appliesTo, decidedBy, ifItDoesNotFit and items), rendered by `public/src/views/PracticesView.vue` in the situations block; `README.md` — "Customer & User Feedback" stays as the source text.
+- **Deviation from plan:** the site carries the section inside the practices situations list rather than as a standalone route section, and `customerFeedback` is a sixth situation block alongside the five the plan named.
+- **Resolved position:** the site now carries the "Customer & User Feedback" content that previously existed only in the README.
+- **Disposition:** added — the `customerFeedback` data key and its rendering in `PracticesView.vue`.
 
 ### WP-51 — The assessment exists on the site with no README counterpart
 
@@ -435,7 +544,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** self-contradiction
 - **Original wording:** "export const assessmentQuestions = [", "export const overallAssessment = {", "{{ totalScore }} / 48"
 - **Why:** The site publishes a full route (`/assessment`) with 12 scored questions, four categories, per-category recommendations and four overall bands; the README has no assessment section and its "Appendix: Quick Reference" has no assessment block, so the two sides do not carry the same set of sections.
-- **Planned resolution:** `README.md` — new section describing the self-assessment (questions, categories, scoring bands, and the statement that it is a self-report) plus an appendix block; keep the site route and mirror the same numbers in `public/src/data/assessment.js`.
+- **Resolution made:** `README.md` — new "The Self-Assessment" (anchor `assessment-scoring`) and its validity paragraph (anchor `assessment-validity`), plus the appendix block "The Self-Assessment", now describe the twelve scored questions, the four categories, the 0–4 points per question, the 48-point maximum, the category bands (low below 40% of a category maximum, medium 40–70%, high above 70%), the overall bands (low 12 to 24, medium 25 to 36, strong 37 to 42, high 43 to 48) and the statement that the assessment is a self-report with no published validity evidence; mirrored in `public/src/data/assessment.js` — `overallAssessment.scoring` and `overallAssessment.validity`, with the site route unchanged.
+- **Deviation from plan:** the README section exists, but its scoring paragraph still says "The same two cuts give the four overall bands", while the data says the bands are "a separate BEAT choice … not produced by those two percentage cuts". The README wording is outside this card's file, so the difference is recorded here rather than fixed.
+- **Resolved position:** both sides now describe the same instrument — twelve scored questions, four categories, 48 points maximum, one category rule and one band list — and both state that it is a self-report with no published validity evidence; only the README's derivation sentence still differs from the data.
+- **Disposition:** added — the README sections "The Self-Assessment" and the appendix assessment block.
 
 ### WP-52 — Three board rules exist only in the README prose and one view
 
@@ -443,7 +555,10 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Category:** self-contradiction
 - **Original wording:** "Work-in-progress limit: three per maker. NEXT is ordered. NOW pins to top. Items stale for five days return to backlog." against a `constraints` array holding nine entries and none of them being "NOW pins to top" or "Items stale for five days return to backlog"
 - **Why:** The board rules live in README prose and in `public/src/views/FrameworkView.vue` ("WIP Limit", "Stale Items"), but the shared `constraints` structure that feeds "The Numbers" on both the framework page and the reference page carries neither the pinning rule nor the staleness rule, and the "We do not groom" rule has no entry there at all. The mapping a reader of either side builds is therefore different from the other.
-- **Planned resolution:** `public/src/data/manifesto.js` — `constraints`: add the missing board rules and the sizing rule so the shared structure matches `README.md` — "The Board" and "Work Items".
+- **Resolution made:** `public/src/data/manifesto.js` — the missing board rules are now shared data in `decisionRules` — "Work-in-progress limit", "Stale-item sweep", "NOW bucket limit" and "Sizing", each with appliesTo, decidedBy and ifItDoesNotFit; `constraints` carries the nine numeric limits that feed "The Numbers" on both the framework and the reference page, including "WIP per maker | 3 items", "NOW items | Max 5" and "Planning capacity | 80% of available working time".
+- **Deviation from plan:** the board rules landed in `decisionRules` (fourteen rules), not in `constraints` as planned, and the planned `public/src/views/FrameworkView.vue` — "WIP Limit" and "Stale Items" sections do not exist at the branch head; the view now renders "Planning numbers" and "Decision rules".
+- **Resolved position:** the WIP limit, the stale-item sweep, the NOW bucket limit and the sizing rule are the same rules on both sides, carried once in the shared data.
+- **Disposition:** added — the `decisionRules` — "Work-in-progress limit", "Stale-item sweep", "NOW bucket limit" and "Sizing" rules.
 
 ---
 
