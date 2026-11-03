@@ -3,28 +3,28 @@ export const assessmentCategories = [
     id: 'focus',
     title: 'Focus & Deep Work',
     icon: 'fas fa-brain',
-    gradient: 'from-blue-500 to-cyan-500',
+    gradient: 'bg-accent text-accent-foreground',
     color: 'blue'
   },
   {
     id: 'communication',
     title: 'Communication',
     icon: 'fas fa-comments',
-    gradient: 'from-purple-500 to-pink-500',
+    gradient: 'bg-accent text-accent-foreground',
     color: 'purple'
   },
   {
     id: 'autonomy',
     title: 'Autonomy & Trust',
     icon: 'fas fa-user-shield',
-    gradient: 'from-green-500 to-emerald-500',
+    gradient: 'bg-accent text-accent-foreground',
     color: 'green'
   },
   {
     id: 'sustainability',
     title: 'Sustainability',
     icon: 'fas fa-leaf',
-    gradient: 'from-amber-500 to-orange-500',
+    gradient: 'bg-accent text-accent-foreground',
     color: 'amber'
   }
 ]
@@ -34,7 +34,7 @@ export const assessmentQuestions = [
   {
     id: 1,
     category: 'focus',
-    question: 'How often do you get uninterrupted blocks of 2+ hours for focused work?',
+    question: 'How often do you get uninterrupted blocks of 2+ hours for focused work? BEAT sets the daily focus block at 4 hours — a BEAT default, not a research finding.',
     options: [
       { value: 1, label: 'Rarely or never', description: 'Constant interruptions throughout the day' },
       { value: 2, label: 'Sometimes', description: 'Maybe once or twice a week' },
@@ -84,7 +84,7 @@ export const assessmentQuestions = [
     options: [
       { value: 1, label: 'Immediate', description: 'Expected to respond within minutes' },
       { value: 2, label: 'Within hours', description: 'Same-day responses expected' },
-      { value: 3, label: 'Within a day', description: '24-hour response is acceptable' },
+      { value: 3, label: 'Within a day', description: '24 working hours — a BEAT default, listed in the constraints table' },
       { value: 4, label: 'Async-friendly', description: 'Response when working, no pressure' }
     ]
   },
@@ -166,7 +166,7 @@ export const assessmentQuestions = [
       { value: 1, label: 'No', description: 'Always feature work' },
       { value: 2, label: 'Personal time only', description: 'Learning is on your own time' },
       { value: 3, label: 'Sometimes', description: 'When we have slack' },
-      { value: 4, label: 'Protected time', description: '20% for exploration built in' }
+      { value: 4, label: 'Protected time', description: '20% of working time for exploration — a BEAT default, listed in the constraints table' }
     ]
   }
 ]
@@ -175,25 +175,25 @@ export const beatRecommendations = {
   focus: {
     low: {
       title: 'Your Focus is Under Attack',
-      description: 'Constant interruptions and meetings are destroying your team\'s ability to do deep work. Research shows it takes 52 minutes to reach focus and 23 minutes to recover from interruption.',
+      description: 'Constant interruptions and meetings are undermining your team\'s ability to do deep work. Resuming interrupted work takes about twenty-five minutes [mark-2005], and the most productive users tracked by DeskTime worked in blocks of fifty-two minutes [desktime-2014].',
       recommendations: [
-        'Establish 4-hour daily sacred blocks where no meetings or interruptions are allowed',
-        'Limit meetings to 2 hours per week maximum',
+        'Establish 4-hour daily sacred blocks where no meetings or interruptions are allowed — a BEAT default, listed in the constraints table',
+        'Limit meetings to 2 hours per week maximum — a BEAT default, listed in the constraints table',
         'Measure outcomes, not hours worked or time online',
         'Let makers choose when their focus time occurs'
       ],
-      beatPrinciple: 'Protect the focus state above all else. The uninterrupted mind produces the best work.'
+      beatPrinciple: 'Protect the focus state above all else. Sacred blocks come first, because everything else in the plan depends on them.'
     },
     medium: {
       title: 'Focus Needs Protection',
-      description: 'You have some focus time, but it\'s inconsistent. With more structure, your team could dramatically increase productivity.',
+      description: 'You have some focus time, but it\'s inconsistent. With more structure, your team could recover time that interruptions now take from it.',
       recommendations: [
         'Formalize sacred blocks and make them non-negotiable',
-        'Audit your meeting calendar - can 50% become async?',
+        'Audit your meeting calendar - can half of it become async?',
         'Create clear signals for when someone is in focus mode',
         'Track interruption patterns and address the sources'
       ],
-      beatPrinciple: 'Presence does not equal productivity. A maker in focus for four hours outproduces a maker in meetings for eight.'
+      beatPrinciple: 'Presence does not equal productivity. We do not measure hours worked or time online. We measure outcomes delivered.'
     },
     high: {
       title: 'Strong Focus Culture',
@@ -213,7 +213,7 @@ export const beatRecommendations = {
       description: 'Without written documentation and async practices, knowledge is lost, decisions are forgotten, and everyone stays chained to chat.',
       recommendations: [
         'Adopt a "write first" policy for all decisions',
-        'Set expectation: responses within 24 working hours, not minutes',
+        'Set expectation: responses within 24 working hours, not minutes — a BEAT default, listed in the constraints table',
         'Create clear channels: urgent = phone, everything else waits',
         'Replace daily standups with written async check-ins'
       ],
@@ -282,9 +282,9 @@ export const beatRecommendations = {
       title: 'Burnout Risk is High',
       description: 'Regular overtime and no time for learning is a recipe for burnout, turnover, and declining quality.',
       recommendations: [
-        'Plan at 80% capacity, leaving slack for life',
+        'Plan at 80% capacity, leaving slack for life — a BEAT default, listed in the constraints table',
         'When deadlines conflict, cut scope—never cut rest',
-        'Protect 20% time for learning and exploration',
+        'Protect 20% time for learning and exploration — a BEAT default, listed in the constraints table',
         'Make overtime a red flag, not a badge of honor'
       ],
       beatPrinciple: 'Sustainable pace is not optional. Overtime is a red flag, not a badge of honor.'
@@ -295,7 +295,7 @@ export const beatRecommendations = {
       recommendations: [
         'Track overtime patterns and address root causes',
         'Formally protect exploration time',
-        'Review capacity planning—are you over 80%?',
+        'Review capacity planning—are you over 80% of your working time? (a BEAT default, listed in the constraints table)',
         'Watch for burnout warning signs'
       ],
       beatPrinciple: 'The team\'s health is the Enabler\'s responsibility. Someone must watch for warning signs.'
@@ -315,12 +315,30 @@ export const beatRecommendations = {
 }
 
 export const overallAssessment = {
+  scoring: {
+    id: 'assessment-scoring',
+    maxScore: 48,
+    questionCount: 12,
+    perQuestionMax: 4,
+    categoryThresholds: 'BEAT\'s own scoring rule, not a research finding: a category is low below 40 percent of that category\'s own maximum, medium from 40 to 70 percent of it, and high above 70 percent. The four overall bands are a separate BEAT choice, stated as absolute score ranges out of 48, and are not produced by those two percentage cuts: low 12 to 24, medium 25 to 36, strong 37 to 42, high 43 to 48.',
+    bandCuts: [
+      { range: [12, 24], title: 'Significant Opportunity for Improvement' },
+      { range: [25, 36], title: 'Building Better Practices' },
+      { range: [37, 42], title: 'Strong Foundation' },
+      { range: [43, 48], title: 'BEAT-Ready Team' }
+    ],
+    derivation: 'The category cuts are percentages of one category maximum, 12 points per category. The overall bands are absolute score ranges out of 48, listed in the order the bands appear under overallAssessment. BEAT\'s own choice, not a research finding, and not derived from the category cuts.'
+  },
+  validity: {
+    id: 'assessment-validity',
+    note: 'This is a self-report with no published validity evidence. It measures what a team believes about its own practice, not delivery, quality or wellbeing. Use it to start a conversation and to compare your own score over time, not as a benchmark against other teams.'
+  },
   struggling: {
     range: [12, 24],
     title: 'Significant Opportunity for Improvement',
     icon: 'fas fa-exclamation-triangle',
     color: 'red',
-    description: 'Your team faces significant challenges that BEAT is designed to solve. The good news: there\'s tremendous potential for improvement.',
+    description: 'Your team faces significant challenges that BEAT is designed to address. The good news: there is room for real improvement here.',
     callToAction: 'Start with the biggest pain point. Small changes compound over time.'
   },
   developing: {
@@ -328,7 +346,7 @@ export const overallAssessment = {
     title: 'Building Better Practices',
     icon: 'fas fa-seedling',
     color: 'amber',
-    description: 'Your team has some good foundations but inconsistent practices. BEAT can provide the structure to level up.',
+    description: 'Your team has some good foundations but inconsistent practices. BEAT can provide the structure to build on them.',
     callToAction: 'Focus on making existing good practices consistent and documented.'
   },
   strong: {
@@ -344,7 +362,7 @@ export const overallAssessment = {
     title: 'BEAT-Ready Team',
     icon: 'fas fa-star',
     color: 'green',
-    description: 'Congratulations! Your team is already aligned with BEAT principles. Consider adopting the framework formally.',
-    callToAction: 'You\'re ready to fully adopt BEAT and become ambassadors for these practices.'
+    description: 'Your team is already aligned with BEAT principles. Consider adopting the framework formally.',
+    callToAction: 'You\'re ready to adopt BEAT fully and to teach these practices to others.'
   }
 }

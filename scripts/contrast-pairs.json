@@ -1,0 +1,150 @@
+{
+  "comment": [
+    "The foreground/background pairs of the theme token contract that the",
+    "contrast harness measures. Every pair names the CSS custom properties",
+    "it reads, so a reviewer can check the list against the token file",
+    "without running anything.",
+    "",
+    "The category fixes the WCAG 2.2 threshold the harness applies:",
+    "  body-text    4.5:1  (WCAG 1.4.3, normal-size text)",
+    "  large-text   3:1    (WCAG 1.4.3, large-scale text)",
+    "  ui-component 3:1    (WCAG 1.4.11, component boundaries)",
+    "",
+    "Every pair also states its own threshold, so the list carries the",
+    "requirement in full and can be reviewed without the harness. The",
+    "harness rejects a pair whose threshold disagrees with its category.",
+    "",
+    "A pair is checked in both themes: the light values come from the :root",
+    "block and the dark values from the .dark block of the token file."
+  ],
+  "pairs": [
+    {
+      "id": "body-text-on-background",
+      "category": "body-text",
+      "threshold": 4.5,
+      "foreground": "--color-text-body",
+      "background": "--color-background",
+      "surface": "Body copy on the page background"
+    },
+    {
+      "id": "body-text-on-muted",
+      "category": "body-text",
+      "threshold": 4.5,
+      "foreground": "--color-text-body",
+      "background": "--color-muted",
+      "surface": "Body copy on a muted surface (card, code block, inset panel)"
+    },
+    {
+      "id": "foreground-on-background",
+      "category": "body-text",
+      "threshold": 4.5,
+      "foreground": "--color-foreground",
+      "background": "--color-background",
+      "surface": "Primary text and headings on the page background"
+    },
+    {
+      "id": "foreground-on-muted",
+      "category": "body-text",
+      "threshold": 4.5,
+      "foreground": "--color-foreground",
+      "background": "--color-muted",
+      "surface": "Primary text and headings on a muted surface"
+    },
+    {
+      "id": "muted-foreground-on-background",
+      "category": "body-text",
+      "threshold": 4.5,
+      "foreground": "--color-muted-foreground",
+      "background": "--color-background",
+      "surface": "Secondary text (captions, metadata, helper text) on the page background"
+    },
+    {
+      "id": "muted-foreground-on-muted",
+      "category": "body-text",
+      "threshold": 4.5,
+      "foreground": "--color-muted-foreground",
+      "background": "--color-muted",
+      "surface": "Secondary text on a muted surface"
+    },
+    {
+      "id": "accent-text-on-background",
+      "category": "body-text",
+      "threshold": 4.5,
+      "foreground": "--color-accent",
+      "background": "--color-background",
+      "surface": "Link and emphasis text on the page background"
+    },
+    {
+      "id": "accent-text-on-muted",
+      "category": "body-text",
+      "threshold": 4.5,
+      "foreground": "--color-accent",
+      "background": "--color-muted",
+      "surface": "Link and emphasis text on a muted surface"
+    },
+    {
+      "id": "accent-foreground-on-accent",
+      "category": "body-text",
+      "threshold": 4.5,
+      "foreground": "--color-accent-foreground",
+      "background": "--color-accent",
+      "surface": "Label text on an accent-filled button or badge"
+    },
+    {
+      "id": "large-text-on-background",
+      "category": "large-text",
+      "threshold": 3,
+      "foreground": "--color-text-large",
+      "background": "--color-background",
+      "surface": "Large headings on the page background"
+    },
+    {
+      "id": "large-text-on-muted",
+      "category": "large-text",
+      "threshold": 3,
+      "foreground": "--color-text-large",
+      "background": "--color-muted",
+      "surface": "Large headings on a muted surface"
+    },
+    {
+      "id": "border-on-background",
+      "category": "ui-component",
+      "threshold": 3,
+      "foreground": "--color-border",
+      "background": "--color-background",
+      "surface": "Control and card boundary on the page background"
+    },
+    {
+      "id": "border-on-muted",
+      "category": "ui-component",
+      "threshold": 3,
+      "foreground": "--color-border",
+      "background": "--color-muted",
+      "surface": "Control and card boundary on a muted surface"
+    },
+    {
+      "id": "accent-boundary-on-background",
+      "category": "ui-component",
+      "threshold": 3,
+      "foreground": "--color-accent",
+      "background": "--color-background",
+      "surface": "Accent control edge and focus indicator on the page background"
+    },
+    {
+      "id": "accent-boundary-on-muted",
+      "category": "ui-component",
+      "threshold": 3,
+      "foreground": "--color-accent",
+      "background": "--color-muted",
+      "surface": "Accent control edge on a muted surface"
+    },
+    {
+      "id": "foreground-boundary-on-background",
+      "category": "ui-component",
+      "threshold": 3,
+      "foreground": "--color-foreground",
+      "background": "--color-background",
+      "surface": "Strong control edge (input outline, toggle track) on the page background"
+    }
+  ]
+}
