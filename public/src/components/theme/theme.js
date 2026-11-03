@@ -2,7 +2,8 @@
  * Theme handling for the light and dark themes.
  *
  * The stored choice wins: localStorage holds it under THEME_STORAGE_KEY.
- * With nothing stored the site follows the prefers-color-scheme media query.
+ * With nothing stored the site follows the prefers-color-scheme media query,
+ * and keeps following it for as long as no explicit choice is made.
  * The dark theme is active while the root element carries the class "dark".
  *
  * The module is free of Vue imports so the pre-mount bootstrap in main.js
@@ -15,6 +16,14 @@ export const THEME_STORAGE_KEY = 'beat-theme'
 const DARK_CLASS = 'dark'
 const DARK_QUERY = '(prefers-color-scheme: dark)'
 const THEMES = ['light', 'dark']
+
+/** The subscribers that want to know when the active theme changes. */
+const subscribers = new Set()
+
+/** Tell the subscribers that the theme is now this one. */
+function notify (theme) {
+  for (const subscriber of [...subscribers]) subscriber(theme)
+}
 
 /**
  * The stored theme, or null when nothing valid is stored.
@@ -50,6 +59,7 @@ export function applyTheme (theme) {
   if (root) {
     root.classList.toggle(DARK_CLASS, theme === 'dark')
   }
+  notify(theme)
   return theme
 }
 
@@ -76,7 +86,47 @@ export function storeTheme (theme) {
  * Returns the applied theme.
  */
 export function initializeTheme () {
-  return applyTheme(resolveTheme())
+  const theme = resolveTheme()
+  applyTheme(theme)
+  followSystemTheme()
+  return theme
+}
+
+/**
+ * Follow the system preference while no explicit choice is stored.
+ *
+ * The listener applies the new system preference, unless the reader has made
+ * an explicit choice in the meantime: the stored choice always wins.
+ */
+function followSystemTheme () {
+  if (typeof window.matchMedia !== 'function') return
+  let query
+  try {
+    query = window.matchMedia(DARK_QUERY)
+  } catch {
+    return
+  }
+  if (!query || typeof query.addEventListener !== 'function') return
+
+  const onChange = (event) => {
+    if (readStoredTheme() !== null) return
+    applyTheme(event.matches ? 'dark' : 'light')
+  }
+
+  try {
+    query.addEventListener('change', onChange)
+  } catch {
+    return
+  }
+}
+
+/**
+ * Subscribe to theme changes. Returns a function that removes the subscriber.
+ * The subscriber is called with the theme that is now active.
+ */
+export function onThemeChange (subscriber) {
+  subscribers.add(subscriber)
+  return () => subscribers.delete(subscriber)
 }
 
 /**

@@ -1,6 +1,6 @@
 <script setup>
-import { ref } from 'vue'
-import { isDarkTheme, toggleTheme } from './theme'
+import { onUnmounted, ref } from 'vue'
+import { isDarkTheme, onThemeChange, toggleTheme } from './theme'
 
 // The theme is already on the root element when the app mounts, so the
 // initial state is read straight from it.
@@ -9,6 +9,14 @@ const isDark = ref(isDarkTheme())
 const onToggle = () => {
   isDark.value = toggleTheme() === 'dark'
 }
+
+// The theme can also change without a click, when the site follows the
+// system preference, so the button keeps its icon and label in step.
+const unsubscribe = onThemeChange((theme) => {
+  isDark.value = theme === 'dark'
+})
+
+onUnmounted(unsubscribe)
 </script>
 
 <template>
