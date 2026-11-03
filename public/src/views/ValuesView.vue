@@ -15,7 +15,9 @@ import PageSection from '@/components/layout/PageSection.vue'
     <PageSection title="Core values" summary="A core value names the thing it prefers over the thing it gives up.">
       <dl class="space-y-5">
         <div v-for="value in coreValues" :key="value.valueMore" class="flex gap-3 border-l-2 border-accent pl-3">
-          <i :class="value.icon" class="mt-1 text-accent" aria-hidden="true"></i>
+          <div class="mt-1 text-accent">
+            <i :class="value.icon" aria-hidden="true"></i>
+          </div>
           <div>
             <dt class="text-title font-semibold text-large">{{ value.valueMore }}</dt>
             <dd class="text-body-base text-body">We choose this over {{ value.over }}.</dd>

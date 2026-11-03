@@ -15,10 +15,10 @@ defineProps({
     <!-- Small screens: one block per row, so the table never scrolls sideways. -->
     <dl class="divide-y divide-border sm:hidden">
       <div v-for="(row, rowIndex) in rows" :key="rowIndex" class="px-4 py-3">
-        <div v-for="(cell, cellIndex) in row" :key="cellIndex" class="py-1">
-          <dt class="text-body-base font-semibold text-muted-foreground">{{ headers[cellIndex] }}</dt>
-          <dd class="text-body-base text-body">{{ cell }}</dd>
-        </div>
+        <template v-for="(cell, cellIndex) in row" :key="cellIndex">
+          <dt class="pt-1 text-body-base font-semibold text-muted-foreground">{{ headers[cellIndex] }}</dt>
+          <dd class="pb-1 text-body-base text-body">{{ cell }}</dd>
+        </template>
       </div>
     </dl>
 
