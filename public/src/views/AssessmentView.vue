@@ -60,12 +60,12 @@ const reset = () => {
     <PageHeader
       eyebrow="Applying BEAT"
       title="Team Assessment"
-      :summary="`${assessmentQuestions.length} questions, ${overallAssessment.scoring.perQuestionMax} points each, ${overallAssessment.scoring.maxScore} points in total. Score what your team does now, not what it intends to do.`"
+      summary="Answer a short set of questions about how your team works. Score what your team does now, not what it intends to do."
     />
 
     <PageSection
       title="Questions"
-      :summary="`Answered ${answeredCount} of ${assessmentQuestions.length}.`"
+      :summary="`Answered so far: ${answeredCount}.`"
     >
       <div class="space-y-10">
         <div v-for="category in assessmentCategories" :key="category.id">
@@ -106,7 +106,7 @@ const reset = () => {
 
     <PageSection title="Your result">
       <p v-if="!complete" class="text-body-base text-body">
-        {{ assessmentQuestions.length - answeredCount }} questions still unanswered. Each category
+        Some questions are still unanswered. Each category
         shows its recommendation once all of its questions are answered.
       </p>
 
