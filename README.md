@@ -80,7 +80,7 @@ Meetings cost everyone present, simultaneously, and the people who need the room
 
 **6. Response time is not reaction time.**
 
-Async means responding when working, not responding immediately. We expect a response within one working day, counted against the coverage hours in the time-zone rules. Urgent means a phone call to the on-call rota, and the rota names the fallback when nobody answers. Everything else waits.
+Async means responding when working, not responding immediately. We expect a response within 24 working hours — the BEAT default, listed in the constraints table — counted against the coverage hours in the time-zone rules. Urgent means a phone call to the on-call rota, and the rota names the fallback when nobody answers. Everything else waits.
 
 ---
 
@@ -207,7 +207,7 @@ We use four buckets:
 
 **ICEBOX** — Someday, or needs more thought. Revisit quarterly.
 
-The Enabler orders the stack, on priority and capacity; they do not assign items to makers. Makers may adjust the order with a reason. A maker who objects to the order says so asynchronously, with their reason. If nobody answers within one working day, the dispute goes to a short synchronous discussion, and the Enabler decides unless they are a party to it, in which case the team decides.
+The Enabler orders the stack, on priority and capacity; they do not assign items to makers. Makers may adjust the order with a reason. A maker who objects to the order says so asynchronously, with their reason. If nobody answers within 24 working hours — a BEAT default, not a research finding — the dispute goes to a short synchronous discussion, and the Enabler decides unless they are a party to it, in which case the team decides.
 
 ---
 
@@ -291,7 +291,7 @@ Large features require coordination without ceremony:
 
 **Blockers:** Surface in check-in. Pull different work while waiting. The Enabler escalates a blocker inside the team by reordering the board; a blocker that belongs to another team is escalated through the dependency rules.
 
-**Decisions:** Post a recommendation naming the owner. Wait one working day. No objection means the decision is recorded and stands; silence is not consent on its own, so the record says who decided. An objection moves it to a brief synchronous discussion, and the owner decides.
+**Decisions:** Post a recommendation naming the owner. Wait 24 working hours — a BEAT default, not a research finding. No objection means the decision is recorded and stands; silence is not consent on its own, so the record says who decided. An objection moves it to a brief synchronous discussion, and the owner decides.
 
 ---
 
@@ -433,7 +433,7 @@ This applies to any service with a production path a customer depends on. The te
 
 ### Working across Time Zones
 
-Every rule in BEAT that counts time assumes one working day. Here is the one this team uses.
+Every rule in BEAT that counts time runs on the team's stated coverage hours, in working hours. Here is the reference time zone those hours are counted in.
 
 This applies to every rule measured in hours or days: response expectations, the review window, auto-proceed, stale items, daily merges and the daily check-in. The team names its reference time zone at the start of a beat; the Enabler records it with the beat goals. A team that spans zones unevenly picks the zone with the fewest members as the reference, or picks no reference and states each rule in absolute hours instead.
 
