@@ -525,7 +525,7 @@ Categories are ordered: unsupported claim, wrong number, self-contradiction, rul
 - **Resolution made:** `public/src/views/HomeView.vue` — `commitments` now carries all five commitments (Protecting focus, Defaulting to async, Trusting makers, Sustaining pace, Improving always), matching `README.md` — "The BEAT Commitment" (which ends "**Improving always** — We will reflect each beat. We will adjust. We will find better ways.").
 - **Deviation from plan:** the fifth commitment was added in the view, as planned, but the list stayed local to `public/src/views/HomeView.vue`; no `commitments` key was added to `public/src/data`, so the README and the site still carry the list in two places.
 - **Resolved position:** the site now publishes the same five commitments as the README.
-- **Disposition:** reworded — the fifth commitment "Improving always" is now present in the site's list.
+- **Disposition:** added — the fifth commitment "Improving always" is now present in the site's list, so the site publishes the same five commitments as the README.
 
 ### WP-50 — "Customer & User Feedback" has no site counterpart at all
 
