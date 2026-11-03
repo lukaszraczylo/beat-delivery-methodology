@@ -695,7 +695,7 @@ By adopting BEAT, we commit to:
 
 The site publishes a self-assessment: a short questionnaire a team fills in about its own practice, scored into four categories — focus, communication, autonomy and sustainability — and then into an overall band.
 
-**How it is scored.** Every question is worth 0 to 4 points, and each category carries three questions, so the maximum score is 48. The thresholds are BEAT's own scoring rule, not a research finding: a category is low below 40 percent of its maximum, medium from 40 to 70 percent, and high above 70 percent. The same two cuts give the four overall bands: low 12 to 24, medium 25 to 36, strong 37 to 42, and high 43 to 48.
+**How it is scored.** Every question is worth 0 to 4 points, and each category carries three questions, so the maximum score is 48. The thresholds are BEAT's own scoring rule, not a research finding: a category is low below 40 percent of its maximum, medium from 40 to 70 percent, and high above 70 percent. The four overall bands are a separate BEAT choice, stated as absolute score ranges out of 48, and are not produced by those two percentage cuts: low 12 to 24, medium 25 to 36, strong 37 to 42, and high 43 to 48.
 
 <!-- id: assessment-validity -->
 
@@ -855,7 +855,7 @@ This manifesto is open for use and adaptation.
 
 Attribution appreciated. Improvement welcomed. Dogma discouraged.
 
-The weak-point review of this manifesto — every unsupported claim, wrong number, contradiction, uncovered situation and rule that cannot be applied as written, with the planned resolution for each — is recorded in [docs/weak-points.md](docs/weak-points.md).
+The weak-point review of this manifesto — every unsupported claim, wrong number, contradiction, uncovered situation and rule that cannot be applied as written, with the resolution made for each — is recorded in [docs/weak-points.md](docs/weak-points.md).
 
 ---
 
